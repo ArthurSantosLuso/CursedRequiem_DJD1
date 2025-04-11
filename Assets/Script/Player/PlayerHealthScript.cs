@@ -5,7 +5,7 @@ public class PlayerHealthScript : ValuesScript
     [SerializeField]
     private LifeManaBar barsScript;
     [SerializeField]
-    private OkapiKit.MovementPlatformer moveScript;
+    private PlayerMovement moveScript;
 
     private Animator anin;
 

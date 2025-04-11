@@ -1,102 +1,115 @@
 using System.Collections;
+using System.Diagnostics.Tracing;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField]
-    private Vector2 speed;
+    private Vector2 velocity;
     [SerializeField]
-    private float coyoteTime = 0.15f;
-
+    private string horizontalAxisName = "Horizontal";
     [SerializeField]
-    private Collider2D groundCheck;
+    private Transform groundCheck;
+    [SerializeField]
+    private float groundCheckRadius = 2.0f;
     [SerializeField]
     private LayerMask groundLayer;
     [SerializeField]
-    private Collider2D groundCollider;
+    private float jumpMaxDuration;
     [SerializeField]
-    private Collider2D airCollider;
+    private float jumpGravity;
 
     private Rigidbody2D rb;
+    private SpriteRenderer spriteRenderer;
     private Animator animator;
-    private bool isTouchingGround;
-    private bool canJump;
+    private bool isGrounded;
+    private float jumpTimer;
+    private float originalGravity;
 
-    void Start()
+    private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        originalGravity = rb.gravityScale;
         animator = GetComponent<Animator>();
+
+        // GetComponent<CapsuleCollider2D>().enabled = true;
+        // GetComponent<BoxCollider2D>().enabled = false;
     }
 
     private void Update()
     {
-        if (isTouchingGround)
-            Debug.Log("Estou a tocar o chão");
-        else Debug.Log("Não estou a tocar o chão");
-    }
+        CheckIsGrounded();
 
+        float moveDir = Input.GetAxis(horizontalAxisName);
 
-    void FixedUpdate()
-    {
-        // Horizontal Movement X
-        float deltaX = Input.GetAxis("Horizontal") * speed.x;
-        rb.linearVelocity = new Vector2(deltaX, rb.linearVelocityY);
+        Vector2 currentVelocity = rb.linearVelocity;
 
-        // Apply Jump
-        if (Input.GetKeyDown(KeyCode.Space))
+        currentVelocity.x = moveDir * velocity.x;
+
+        if (Input.GetButtonDown("Jump"))
         {
-            IsGrounded();
-            Jump();
-        }
-
-        // Air Control
-        if (!isTouchingGround)
-        {
-            rb.linearVelocity += new Vector2(deltaX * speed.x * 0.1f, 0);
-        }
-
-        // Collider Swap
-        groundCollider.enabled = isTouchingGround;
-        airCollider.enabled = !isTouchingGround;
-
-        // Animator Parameters
-        animator.SetFloat("AbsVelocityX", Mathf.Abs(rb.linearVelocityX));
-        animator.SetFloat("AbsVelocityY", Mathf.Abs(rb.linearVelocityY));
-        animator.SetFloat("VelocityX", rb.linearVelocityX);
-        animator.SetFloat("VelocityY", rb.linearVelocityY);
-        animator.SetBool("IsGrounded", isTouchingGround);
-    }
-
-    private void IsGrounded()
-    {
-        if (groundCheck)
-        {
-            ContactFilter2D contactFilter = new ContactFilter2D();
-            contactFilter.useLayerMask = true;
-            contactFilter.layerMask = groundLayer;
-
-            Collider2D[] results = new Collider2D[128];
-
-            int n = Physics2D.OverlapCollider(groundCheck, contactFilter, results);
-            if (n > 0)
+            if (isGrounded)
             {
-                isTouchingGround = true;
-                //lastGroundTime = Time.time;
-                return;
+                currentVelocity.y = velocity.y;
+                jumpTimer = 0f;
+                rb.gravityScale = jumpGravity;
+            }
+        }
+        else if (jumpTimer < jumpMaxDuration)
+        {
+            jumpTimer = jumpTimer + Time.deltaTime;
+            if (Input.GetButton("Jump"))
+            {
+                rb.gravityScale = jumpGravity;
             }
             else
             {
-                isTouchingGround = false;
-
+                jumpTimer = jumpMaxDuration;
+                rb.gravityScale = originalGravity;
             }
+        }
+        else
+        {
+            rb.gravityScale = originalGravity;
+        }
+
+
+        rb.linearVelocity = currentVelocity;
+
+        if (moveDir < 0)
+            transform.rotation = Quaternion.Euler(0.0f, 180.0f, 0.0f);
+        else if (moveDir > 0)
+            transform.rotation = Quaternion.identity;
+
+        // GetComponent<CapsuleCollider2D>().enabled = isGrounded;
+        // GetComponent<BoxCollider2D>().enabled = !isGrounded;
+
+        animator.SetBool("IsGrounded", isGrounded);
+        animator.SetFloat("AbsVelocityX", Mathf.Abs(currentVelocity.x));
+        animator.SetFloat("VelocityY", currentVelocity.y);
+    }
+
+    void CheckIsGrounded()
+    {
+        Collider2D collider = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+
+        if (collider != null)
+        {
+            isGrounded = true;
+        }
+        else
+        {
+            isGrounded = false;
         }
     }
 
-    private void Jump()
+    private void OnDrawGizmosSelected()
     {
-        if (isTouchingGround)
-        {
-            rb.linearVelocity = new Vector2(rb.linearVelocityX, speed.y);
-        }
+        if (groundCheck == null) return;
+
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
     }
 }

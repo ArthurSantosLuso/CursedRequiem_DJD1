@@ -11,6 +11,8 @@ public class PlayerAttack : MonoBehaviour
 
     [SerializeField]
     private Rigidbody2D rig;
+    [SerializeField]
+    private GameObject slashFX;
 
     [Header("Attack Colliders")]
     [SerializeField]
@@ -36,8 +38,8 @@ public class PlayerAttack : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Mouse0))
             Attack("LightAttack");
-        else if (Input.GetKeyDown(KeyCode.Mouse1))
-            Attack("HeavyAttack");
+        //else if (Input.GetKeyDown(KeyCode.Mouse1))
+            //Attack("HeavyAttack");
 
     }
 
@@ -57,11 +59,16 @@ public class PlayerAttack : MonoBehaviour
     private void EnableLightAttackCollider()
     {
         lightAttackCollider.GetComponent<BoxCollider2D>().enabled = true;
+        slashFX.SetActive(false);
+        slashFX.SetActive(true);
+
     }
 
     private void DisableLightAttackCollider()
     {
         lightAttackCollider.GetComponent<BoxCollider2D>().enabled = false;
+        slashFX.SetActive(false);
+
     }
 
     private void EnableHeavyAttackCollider()
