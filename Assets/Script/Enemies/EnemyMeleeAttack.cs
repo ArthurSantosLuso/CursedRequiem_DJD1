@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class EnemyMeleeAttack : MonoBehaviour
 {
+    // Esse script deve tomar conta da logica de ataque do inimigo.
+    // Cooldown do ataque, dano, range, delay do ataque, etc... são o que devem ser tratados aqui.
+
     [Header("Attack Configurations")]
     [SerializeField]
     private float attackCooldown = 1.5f;
@@ -33,8 +36,9 @@ public class EnemyMeleeAttack : MonoBehaviour
     private void Update()
     {
         Debug.Log(stateManager.CurrentState);
+
         // Se o inimigo foi afetado pela condição de sleep, não pode fazer nada.
-        if (stateManager.CurrentState == EnemyStates.Sleeping)
+        if (stateManager.IsSleeping())
             return;
 
         Collider2D target = Physics2D.OverlapCircle(attackPoint.position, attackRange, targetLayer);
@@ -53,9 +57,13 @@ public class EnemyMeleeAttack : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Trata de tocar a animação de ataque e do delay entre cada ataque.
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator Attack()
     {
-        if (stateManager.CurrentState == EnemyStates.Sleeping)
+        if (stateManager.IsSleeping())
             yield return null;
 
         canAttack = false;
@@ -67,6 +75,9 @@ public class EnemyMeleeAttack : MonoBehaviour
         canAttack = true;
     }
 
+    /// <summary>
+    /// Procura pelo jogador, e se achar, aplica o dano no mesmo.
+    /// </summary>
     public void ApplyDamage()
     {
         Collider2D target = Physics2D.OverlapCircle(attackPoint.position, attackRange, targetLayer);

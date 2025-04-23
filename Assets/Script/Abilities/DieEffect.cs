@@ -8,7 +8,6 @@ public class DieEffect : AbilityBaseScript
     [SerializeField]
     private int dmgValue;
 
-
     private void Update()
     {
         // se o player estiver morto, não fazer nada.

@@ -3,6 +3,9 @@ using UnityEngine;
 
 public class FollowPath : MonoBehaviour
 {
+    // Esse script deve tomar conta da lógica de patrulha do inimigo.
+    // Essa lógica de "waypoints" funciona, mas não gosto muito dela. Se possível, alterar depois para algo mais sofisticado.
+
     [SerializeField]
     private UnityEngine.Transform[] waypoints;
     [SerializeField]
@@ -27,7 +30,7 @@ public class FollowPath : MonoBehaviour
     void FixedUpdate()
     {
         // Se o inimigo foi afetado pela condição de sleep, não pode fazer nada.
-        if (stateManager.CurrentState == EnemyStates.Sleeping)
+        if (stateManager.IsSleeping())
             return;
 
         if (waypoints.Length == 0 || stateManager.CurrentState != EnemyStates.Patrolling)
@@ -39,9 +42,12 @@ public class FollowPath : MonoBehaviour
         MoveAlongPath();
     }
 
+    /// <summary>
+    /// Faz o inimigo mover-se em direção do proximo ponto.
+    /// </summary>
     private void MoveAlongPath()
     {
-        if (stateManager.CurrentState == EnemyStates.Sleeping)
+        if (stateManager.IsSleeping())
             return;
 
         UnityEngine.Transform targetWaypoint = waypoints[currentWaypointIndex];
@@ -56,6 +62,9 @@ public class FollowPath : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Trata do flip do inimigo de acordo com a direção que está a se mover.
+    /// </summary>
     private void Flip()
     {
         if (direction.x > 0 && transform.localScale.x < 0)
@@ -63,6 +72,8 @@ public class FollowPath : MonoBehaviour
         else if (direction.x < 0 && transform.localScale.x > 0)
             transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
     }
+
+
 }
 
 

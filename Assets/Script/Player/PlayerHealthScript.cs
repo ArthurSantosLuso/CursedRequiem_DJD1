@@ -2,6 +2,9 @@ using UnityEngine;
 using OkapiKit;
 public class PlayerHealthScript : ValuesScript
 {
+    // Esse script toma conta da vida do jogador.
+    // Aplicar dano e matar o jogador são as coisas que devems ser tratadas aqui.
+
     [SerializeField]
     private LifeManaBar barsScript;
     [SerializeField]
@@ -17,7 +20,7 @@ public class PlayerHealthScript : ValuesScript
 
     private void Update()
     {
-        // não fazer nada de o player estiver morto.
+        // não fazer nada se o player estiver morto.
         if (PlayerStateManager.Instance.State == PlayerState.Dead) return;
 
         if(currentValue <= 0)
@@ -26,6 +29,10 @@ public class PlayerHealthScript : ValuesScript
         }    
     }
 
+    /// <summary>
+    /// Aplica dano ao jogador.
+    /// </summary>
+    /// <param name="damage">Valor do dano a ser aplicado</param>
     public void DamagePlayer(int damage)
     {
         base.currentValue -= damage;
@@ -33,6 +40,9 @@ public class PlayerHealthScript : ValuesScript
         barsScript.AdjustLifeBar(base.calculatedValue);
     }
 
+    /// <summary>
+    /// Mata o jogador.
+    /// </summary>
     private void Die()
     {
         // Mudar o estado do player para morto.

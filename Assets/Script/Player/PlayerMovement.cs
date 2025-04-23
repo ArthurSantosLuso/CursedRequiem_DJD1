@@ -5,6 +5,13 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    // Esse script toma conta da logica de movimentação do jogador. 
+    // Movimentação horizontal (esqueda & direita), Movimentação vertical (pulo),
+    // flip, etc... são exemplo de coisas que devem ser tratadas por esse script.
+
+
+    // Esse script ainda precisa ser bastante melhorado.
+
     [SerializeField]
     private Vector2 velocity;
     [SerializeField]
@@ -91,6 +98,9 @@ public class PlayerMovement : MonoBehaviour
         animator.SetFloat("VelocityY", currentVelocity.y);
     }
 
+    /// <summary>
+    /// Verifica se o jogador está a tocar no chão ou não.
+    /// </summary>
     void CheckIsGrounded()
     {
         Collider2D collider = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);

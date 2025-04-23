@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class PlayerStateManager : MonoBehaviour
 {
-    public static PlayerStateManager Instance { get; private set; }
+    // Essa class toma conta dos estados do jogador.
 
-    // O player começa vivo
+    public static PlayerStateManager Instance { get; private set; }
     public PlayerState State { get; private set; } = PlayerState.Alive;
 
     private void Awake()
@@ -15,6 +15,10 @@ public class PlayerStateManager : MonoBehaviour
             Destroy(gameObject);
     }
 
+    /// <summary>
+    /// Muda o estado do jogador.
+    /// </summary>
+    /// <param name="newState">Novo estado do jogador</param>
     public void SetState(PlayerState newState)
     {
         State = newState;

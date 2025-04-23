@@ -3,6 +3,9 @@ using System.Collections;
 
 public class AbilityBaseScript : MonoBehaviour
 {
+    // Class base para as habilidades do jogador. 
+    // Tudo que é comum entre as habilidades deve ser insrido aqui.
+
     [Header("Base configurations")]
     [SerializeField]
     protected SpriteRenderer effectSprite; // O sprite que será ativado no efeito

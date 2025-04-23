@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
+    // Esse script trata da logica de ataque do jogador.
+    // Ainda precisa ser melhorado. EX: Trocar os colliders para a mesma coisa que o inimigo usa para seu ataque.
+
     private bool grounded;
     private float absVelocityX;
     private Animator anim;

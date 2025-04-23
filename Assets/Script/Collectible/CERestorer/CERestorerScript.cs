@@ -3,6 +3,12 @@ using UnityEngine;
 
 public class CERestorerScript : MonoBehaviour
 {
+    // Esse script deve tomar conta do coletavel que restaura mana do jogaor
+
+
+    // Esse script precisa ser alterado, do jeito que está é esse script que restaura a mana do jogador,
+    // mas a parte de restauração devia ser feita pelo proprio script da mana, com um metodo de aumentar o
+    // valor da mana por exemplo.
 
     [SerializeField]
     private float valeuToRestore;

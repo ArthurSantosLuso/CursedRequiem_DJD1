@@ -4,6 +4,9 @@ using UnityEngine.UI;
 
 public class PlayerManaScript : ValuesScript
 {
+    // Esse scropt toma conta da logica da mana do jogador. Aumentar, diminuir e verificar se pode ser restaurada
+    // são exemplos de coisas que esse script deve ser encarregado.
+
     [SerializeField]
     private LifeManaBar barsScript;
 
@@ -13,6 +16,10 @@ public class PlayerManaScript : ValuesScript
         base.Start();
     }
 
+    /// <summary>
+    /// Reduz o valor da mana do jogaor
+    /// </summary>
+    /// <param name="value">Valor da redução</param>
     public void ReduceMana(int value)
     {
         currentValue -= value;
@@ -21,10 +28,10 @@ public class PlayerManaScript : ValuesScript
     }
 
     /// <summary>
-    /// Verify if the player can restore mana.
+    /// Verifica se o jogador pode restaurar mana.
     /// </summary>
-    /// <param name="actualToRestore">The portion of the restoration value that was effectively applied to the player's mana.</param>
-    /// <returns>Returns the possible amount to restore mana. </returns>
+    /// <param name="valueToRestore">Valor default de restauração da mana.</param>
+    /// <param name="actualToRestore">A parte do valor de restauração que vai efetivamente ser aplicada a mana do jogador.</param>
     public void CanRestore(float valueToRestore, out float actualToRestore)
     {
         // Se já está no máximo, não há nada para restaurar
@@ -46,6 +53,4 @@ public class PlayerManaScript : ValuesScript
         calculatedValue = currentValue / base.defaultValue;
         barsScript.AdjustManaBar(calculatedValue);
     }
-
-
 }

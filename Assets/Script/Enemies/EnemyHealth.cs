@@ -3,6 +3,8 @@ using OkapiKit;
 
 public class EnemyHealth : ValuesScript
 {
+    // Esse script deve controlar a vida do inimigo, evitando redundância com o script pai "ValuesScript".
+
     [SerializeField]
     private EnemyLifeBar barsScript;
 
@@ -11,6 +13,10 @@ public class EnemyHealth : ValuesScript
         base.Start();
     }
 
+    /// <summary>
+    /// Função para causar dano no inimgo.
+    /// </summary>
+    /// <param name="dmgValue">Valor do dano</param>
     public void TakeDamage(int dmgValue)
     {
         base.currentValue -= dmgValue;
