@@ -216,14 +216,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _showInfo: 1
-  _explanation: Switches to scene Level 3
+  _explanation: Switches to scene DJD1_Prototype
   description: 
   enableAction: 1
   hasTags: 0
   actionTags: []
   hasConditions: 0
   actionConditions: []
-  sceneName: Level 3
+  sceneName: DJD1_Prototype
 --- !u!114 &-8068286715935703027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -238,7 +238,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _showInfo: 1
   _explanation: "When a collision with a trigger with tags [Player] starts:\n         
-    switches to scene Level 3\n"
+    switches to scene DJD1_Prototype\n"
   description: 
   enableTrigger: 1
   allowRetrigger: 1

@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _showInfo: 1
-  _explanation: "When key Escape is pressed:\n          switches to scene GD_2Iteration\n"
+  _explanation: "When key Escape is pressed:\n          switches to scene DJD1_Prototype\n"
   description: 
   enableTrigger: 1
   allowRetrigger: 1
@@ -78,11 +78,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _showInfo: 1
-  _explanation: Switches to scene GD_2Iteration
+  _explanation: Switches to scene DJD1_Prototype
   description: 
   enableAction: 1
   hasTags: 0
   actionTags: []
   hasConditions: 0
   actionConditions: []
-  sceneName: GD_2Iteration
+  sceneName: DJD1_Prototype
