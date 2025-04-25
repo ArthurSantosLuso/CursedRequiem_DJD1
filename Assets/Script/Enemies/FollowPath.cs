@@ -1,15 +1,19 @@
+using System;
+using System.Collections;
 using System.Runtime.InteropServices;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class FollowPath : MonoBehaviour
 {
-    // This script should handle the enemy patrol logic.
-    // This "waypoints" logic works, but I don't like it much. If possible, change it later to something more sophisticated.
+    [SerializeField]
+    private Transform[] waypoints;
 
     [SerializeField]
-    private UnityEngine.Transform[] waypoints;
-    [SerializeField]
     private float speed = 2f;
+
+    [SerializeField]
+    private float waitTime = 1.5f;
 
     private int currentWaypointIndex = 0;
     private Rigidbody2D rb;
@@ -24,52 +28,124 @@ public class FollowPath : MonoBehaviour
         anim = GetComponent<Animator>();
 
         if (waypoints.Length > 0)
-            direction = (waypoints[currentWaypointIndex].position - transform.position).normalized;
+            SetDirectionToCurrentWaypoint();
     }
 
     void FixedUpdate()
     {
-        // If the enemy has been affected by the sleep condition, it can't do anything.
         if (stateManager.IsSleeping())
             return;
+
+        if (stateManager.CurrentState == EnemyStates.Attacking)
+        {
+            StopMovement();
+            return;
+        }
 
         if (waypoints.Length == 0 || stateManager.CurrentState != EnemyStates.Patrolling)
         {
-            rb.linearVelocity = Vector2.zero;
+            StopMovement();
             return;
         }
 
-        MoveAlongPath();
+        HandlePatrol();
     }
 
     /// <summary>
-    /// Makes the enemy move toward the next point.
+    /// Controls movement and animation while patrolling between waypoints.
     /// </summary>
-    private void MoveAlongPath()
+    private void HandlePatrol()
     {
-        if (stateManager.IsSleeping())
-            return;
+        // Get the current target waypoint
+        Transform targetWaypoint = waypoints[currentWaypointIndex];
 
-        UnityEngine.Transform targetWaypoint = waypoints[currentWaypointIndex];
+        // Calculate direction toward the waypoint
         direction = (targetWaypoint.position - transform.position).normalized;
-        rb.linearVelocity = direction * speed;
-        anim.SetFloat("VelocityX", rb.linearVelocityX);
 
-        if (Vector2.Distance(transform.position, targetWaypoint.position) < 3.0f)
+        ApplyMovement();
+
+        // Check if the enemy is close enough to pause and switch direction
+        if (IsNearWaypoint(targetWaypoint))
         {
-            currentWaypointIndex = (currentWaypointIndex + 1) % waypoints.Length;
-            Flip();
+            StartCoroutine(PauseBeforeNextWaypoint());
         }
+
+        UpdateAnimation();
     }
+
+    /// <summary>
+    /// Applies horizontal movement based on current direction and state.
+    /// </summary>
+    private void ApplyMovement()
+    {
+        // Use the current velocity to modify the horizontal component
+        Vector2 velocity = rb.linearVelocity;
+        velocity.x = (stateManager.CurrentState == EnemyStates.Waiting) ? 0 : direction.x * speed;
+
+        rb.linearVelocity = new Vector2(velocity.x, rb.linearVelocityY);
+
+        if (stateManager.CurrentState != EnemyStates.Waiting)
+            Flip();
+    }
+
+    /// <summary>
+    /// Stops the enemy's movement completely.
+    /// </summary>
+    private void StopMovement() => rb.linearVelocity = Vector2.zero;
+
+    /// <summary>
+    /// Checks if the enemy is close enough to a waypoint.
+    /// </summary>
+    /// <param name="waypoint">The waypoint to check distance to.</param>
+    /// <returns>True if within threshold distance.</returns>
+    private bool IsNearWaypoint(Transform waypoint) =>
+        Vector2.Distance(transform.position, waypoint.position) < 3.0f;
+
+    /// <summary>
+    /// Updates animation parameters based on current velocity.
+    /// </summary>
+    private void UpdateAnimation() =>
+        anim.SetFloat("AbsVelocityX", Mathf.Abs(rb.linearVelocity.x) / speed);
+
+    /// <summary>
+    /// Sets the current direction toward the active waypoint.
+    /// </summary>
+    private void SetDirectionToCurrentWaypoint() =>
+        direction = (waypoints[currentWaypointIndex].position - transform.position).normalized;
 
     /// <summary>
     /// Handles flipping the enemy according to the direction it's moving.
     /// </summary>
     private void Flip()
     {
-        if (direction.x > 0 && transform.localScale.x < 0)
-            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
-        else if (direction.x < 0 && transform.localScale.x > 0)
-            transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        // If direction.x is positive, face right (0° rotation), else face left (180° rotation)
+        float yRotation;
+        if (direction.x >= 0)
+            yRotation = 0f;
+        else
+            yRotation = 180f;
+
+        transform.rotation = Quaternion.Euler(0, yRotation, 0);
+    }
+
+
+    /// <summary>
+    /// Called when the enemy reaches a waypoint and needs to wait before moving again.
+    /// </summary>
+    /// <returns>Coroutine that waits before resuming patrol</returns>
+    private IEnumerator PauseBeforeNextWaypoint()
+    {
+        stateManager.SetState(EnemyStates.Waiting);
+
+        // Wait for the specified seconds
+        yield return new WaitForSeconds(waitTime);
+
+        // Move to next waypoint in sequence
+        currentWaypointIndex = (currentWaypointIndex + 1) % waypoints.Length;
+
+        SetDirectionToCurrentWaypoint();
+        //Flip();
+
+        stateManager.SetState(EnemyStates.Patrolling);
     }
 }

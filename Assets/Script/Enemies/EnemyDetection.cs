@@ -17,7 +17,7 @@ public class EnemyDetection : MonoBehaviour
 
     void Update()
     {
-
+        
     }
 
     private void OnDrawGizmos()
