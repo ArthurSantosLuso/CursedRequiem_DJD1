@@ -3,39 +3,39 @@ using System.Collections;
 
 public class AbilityBaseScript : MonoBehaviour
 {
-    // Class base para as habilidades do jogador. 
-    // Tudo que é comum entre as habilidades deve ser insrido aqui.
+    // Base class for player abilities. 
+    // Everything common between abilities should be placed here.
 
     [Header("Base configurations")]
     [SerializeField]
-    protected SpriteRenderer effectSprite; // O sprite que será ativado no efeito
+    protected SpriteRenderer effectSprite; // The sprite that will be activated for the effect
     [SerializeField]
-    protected Collider2D effectCollider; // O Collider2D da área de efeito
+    protected Collider2D effectCollider; // The Collider2D for the effect area
     [SerializeField]
-    protected float effectDuration = 0.5f; // Tempo que o efeito fica ativo
+    protected float effectDuration = 0.5f; // The duration the effect remains active
     [SerializeField]
     protected int manaCost;
     [SerializeField]
     protected PlayerManaScript manaScript;
-    
+
 
     protected void Start()
     {
         if (effectSprite != null)
         {
-            effectSprite.enabled = false; // Garante que o efeito começa invisível
+            effectSprite.enabled = false; // Ensures the effect starts invisible
         }
 
         if (effectCollider != null)
         {
-            effectCollider.enabled = false; // Desativa o collider inicialmente
+            effectCollider.enabled = false; // Disables the collider initially
         }
 
     }
 
     protected IEnumerator ApplyEffect(float time)
     {
-        // Ativa o efeito visual e o collider
+        // Activates the visual effect and the collider
         if (effectSprite != null)
         {
             effectSprite.enabled = true;
@@ -46,7 +46,7 @@ public class AbilityBaseScript : MonoBehaviour
             effectCollider.enabled = true;
         }
 
-        // Espera um pouco antes de esconder o efeito
+        // Waits a little before hiding the effect
         yield return new WaitForSeconds(0.5f);
 
         if (effectSprite != null)
@@ -56,7 +56,7 @@ public class AbilityBaseScript : MonoBehaviour
 
         if (effectCollider != null)
         {
-            effectCollider.enabled = false; // Desativa o collider após o efeito
+            effectCollider.enabled = false; // Disables the collider after the effect
         }
     }
 }

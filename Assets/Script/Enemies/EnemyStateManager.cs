@@ -3,20 +3,20 @@ using UnityEngine;
 
 public class EnemyStateManager : MonoBehaviour
 {
-    // Essa classe toma conta dos estados do inimigo. Deve sempre ser referenciada em
-    // todos os tipos de inimigos para controlar o que cada inimigo faz e fazer os scripts funcionarem corretamente.
+    // This class manages the enemy's states. It should always be referenced
+    // in all types of enemies to control what each enemy does and make scripts work properly.
 
     public EnemyStates CurrentState { get; private set; } = EnemyStates.Patrolling;
-    
+
     private Coroutine waitCoroutine;
 
     /// <summary>
-    /// Muda o estado do inimigo.
+    /// Changes the enemy's state.
     /// </summary>
-    /// <param name="newState">Novo estado do inimigo</param>
+    /// <param name="newState">New state of the enemy</param>
     public void SetState(EnemyStates newState)
     {
-        // Se o novo estado for o atual, não fazer nada.
+        // If the new state is the same as the current one, do nothing.
         if (CurrentState == newState)
             return;
 
@@ -37,8 +37,8 @@ public class EnemyStateManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Função para verificar se o inimigo está a dormir.
+    /// Function to check if the enemy is sleeping.
     /// </summary>
-    /// <returns>Se o inimigo está a dormir.</returns>
+    /// <returns>Whether the enemy is sleeping.</returns>
     public bool IsSleeping() => CurrentState == EnemyStates.Sleeping;
 }

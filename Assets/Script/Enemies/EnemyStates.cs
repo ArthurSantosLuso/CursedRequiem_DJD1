@@ -1,11 +1,11 @@
-//"Patrolling" o inimigo está a patrulhar;
-//"Chasing" o inimigo está a perseguir o player;
-//"Attacking" o inimigo está a atacar o player;
-//"Waiting" estado de espera entre waypoints de patrulha;
-//"Sleeping" o inimigo foi afetado pelo efeito de dormir e não pode fazer nada.
+// "Patrolling" the enemy is patrolling;
+// "Chasing" the enemy is chasing the player;
+// "Attacking" the enemy is attacking the player;
+// "Waiting" waiting state between patrol waypoints;
+// "Sleeping" the enemy was affected by the sleep effect and can't do anything.
 
 /// <summary>
-/// Estados do inimigo.
+/// Enemy states.
 /// </summary>
 public enum EnemyStates
 {

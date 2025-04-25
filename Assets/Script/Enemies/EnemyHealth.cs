@@ -3,7 +3,7 @@ using OkapiKit;
 
 public class EnemyHealth : ValuesScript
 {
-    // Esse script deve controlar a vida do inimigo, evitando redundância com o script pai "ValuesScript".
+    // This script should manage the enemy's health, avoiding redundancy with the parent script "ValuesScript".
 
     [SerializeField]
     private EnemyLifeBar barsScript;
@@ -14,9 +14,9 @@ public class EnemyHealth : ValuesScript
     }
 
     /// <summary>
-    /// Função para causar dano no inimgo.
+    /// Function to deal damage to the enemy.
     /// </summary>
-    /// <param name="dmgValue">Valor do dano</param>
+    /// <param name="dmgValue">Damage value</param>
     public void TakeDamage(int dmgValue)
     {
         base.currentValue -= dmgValue;

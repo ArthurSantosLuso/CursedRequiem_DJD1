@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-    // Esse script trata da logica de ataque do jogador.
-    // Ainda precisa ser melhorado. EX: Trocar os colliders para a mesma coisa que o inimigo usa para seu ataque.
+    // This script handles the player's attack logic.
+    // It still needs improvements. Example: Change the colliders to be the same as the ones the enemy uses for its attacks.
 
     private bool grounded;
     private float absVelocityX;
@@ -33,7 +33,7 @@ public class PlayerAttack : MonoBehaviour
 
     private void Update()
     {
-        // Se o estado do player for "morto", não fazer nada.
+        // If the player's state is "dead", do nothing.
         if (PlayerStateManager.Instance.State == PlayerState.Dead) return;
 
         grounded = anim.GetBool("IsGrounded");
@@ -42,7 +42,7 @@ public class PlayerAttack : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0))
             Attack("LightAttack");
         //else if (Input.GetKeyDown(KeyCode.Mouse1))
-            //Attack("HeavyAttack");
+        //Attack("HeavyAttack");
 
     }
 
@@ -58,7 +58,7 @@ public class PlayerAttack : MonoBehaviour
             anim.SetTrigger(attackType);
     }
 
-    #region Métodos chamados pelos Animation Events
+    #region Methods called by Animation Events
     private void EnableLightAttackCollider()
     {
         lightAttackCollider.GetComponent<BoxCollider2D>().enabled = true;
@@ -96,4 +96,3 @@ public class PlayerAttack : MonoBehaviour
 
     #endregion
 }
-

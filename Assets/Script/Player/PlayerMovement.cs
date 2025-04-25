@@ -5,12 +5,11 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    // Esse script toma conta da logica de movimentação do jogador. 
-    // Movimentação horizontal (esqueda & direita), Movimentação vertical (pulo),
-    // flip, etc... são exemplo de coisas que devem ser tratadas por esse script.
+    // This script handles the player's movement logic.
+    // Horizontal movement (left & right), vertical movement (jump),
+    // flip, etc... are examples of things this script should manage.
 
-
-    // Esse script ainda precisa ser bastante melhorado.
+    // This script still needs significant improvement.
 
     [SerializeField]
     private Vector2 velocity;
@@ -82,7 +81,6 @@ public class PlayerMovement : MonoBehaviour
             rb.gravityScale = originalGravity;
         }
 
-
         rb.linearVelocity = currentVelocity;
 
         if (moveDir < 0)
@@ -99,7 +97,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     /// <summary>
-    /// Verifica se o jogador está a tocar no chão ou não.
+    /// Checks if the player is touching the ground or not.
     /// </summary>
     void CheckIsGrounded()
     {

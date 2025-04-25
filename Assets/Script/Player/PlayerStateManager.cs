@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerStateManager : MonoBehaviour
 {
-    // Essa class toma conta dos estados do jogador.
+    // This class manages the player's states.
 
     public static PlayerStateManager Instance { get; private set; }
     public PlayerState State { get; private set; } = PlayerState.Alive;
@@ -16,9 +16,9 @@ public class PlayerStateManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Muda o estado do jogador.
+    /// Changes the player's state.
     /// </summary>
-    /// <param name="newState">Novo estado do jogador</param>
+    /// <param name="newState">New state of the player</param>
     public void SetState(PlayerState newState)
     {
         State = newState;

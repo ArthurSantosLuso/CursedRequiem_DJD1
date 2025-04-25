@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class ValuesScript : MonoBehaviour
 {
-    // Esse script serve como pai para todos os scripts que de alguma forma precisam de "valor base" e "valor atual"
-    // como scripts de vida e mana.
+    // This script serves as a parent for all scripts that in some way need "base value" and "current value",
+    // such as health and mana scripts.
 
     [SerializeField]
     protected float defaultValue;

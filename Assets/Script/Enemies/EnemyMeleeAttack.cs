@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class EnemyMeleeAttack : MonoBehaviour
 {
-    // Esse script deve tomar conta da logica de ataque do inimigo.
-    // Cooldown do ataque, dano, range, delay do ataque, etc... são o que devem ser tratados aqui.
+    // This script should handle the enemy's attack logic.
+    // Attack cooldown, damage, range, attack delay, etc... should be managed here.
 
     [Header("Attack Configurations")]
     [SerializeField]
@@ -37,7 +37,7 @@ public class EnemyMeleeAttack : MonoBehaviour
     {
         Debug.Log(stateManager.CurrentState);
 
-        // Se o inimigo foi afetado pela condição de sleep, não pode fazer nada.
+        // If the enemy has been affected by the sleep condition, it can't do anything.
         if (stateManager.IsSleeping())
             return;
 
@@ -58,7 +58,7 @@ public class EnemyMeleeAttack : MonoBehaviour
     }
 
     /// <summary>
-    /// Trata de tocar a animação de ataque e do delay entre cada ataque.
+    /// Handles playing the attack animation and the delay between each attack.
     /// </summary>
     /// <returns></returns>
     private IEnumerator Attack()
@@ -76,7 +76,7 @@ public class EnemyMeleeAttack : MonoBehaviour
     }
 
     /// <summary>
-    /// Procura pelo jogador, e se achar, aplica o dano no mesmo.
+    /// Searches for the player, and if found, applies damage.
     /// </summary>
     public void ApplyDamage()
     {
@@ -100,4 +100,3 @@ public class EnemyMeleeAttack : MonoBehaviour
         }
     }
 }
-

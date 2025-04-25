@@ -2,9 +2,8 @@ using UnityEngine;
 
 public class EnemyDetection : MonoBehaviour
 {
-    // Esse script deve controlar a área de detecção do inimigo. Se o inimigo que tiver este script detectar o jogador,
-    // ele automaticamente mudará de direção e irá atrás do jogador até um ponto onde poderá atacá-lo, e então atacar.
-
+    // This script should control the enemy's detection area. If the enemy with this script detects the player,
+    // it will automatically change direction and chase the player to a point where it can attack, and then proceed to attack.
 
     [SerializeField]
     private Transform detectionPoint;
@@ -13,12 +12,12 @@ public class EnemyDetection : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
     void Update()
     {
-        
+
     }
 
     private void OnDrawGizmos()

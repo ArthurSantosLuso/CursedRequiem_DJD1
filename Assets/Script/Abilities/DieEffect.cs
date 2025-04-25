@@ -4,13 +4,13 @@ using OkapiKit;
 
 public class DieEffect : AbilityBaseScript
 {
-    [Header("Configuração do Efeito")]
+    [Header("Effect Configuration")]
     [SerializeField]
     private int dmgValue;
 
     private void Update()
     {
-        // se o player estiver morto, não fazer nada.
+        // If the player is dead, do nothing.
         if (PlayerStateManager.Instance.State == PlayerState.Dead) return;
 
         if (Input.GetKeyDown(KeyCode.C))

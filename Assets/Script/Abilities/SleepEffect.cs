@@ -3,8 +3,8 @@ using System.Collections;
 
 public class SleepEffect : AbilityBaseScript
 {
-    [Header("Configuração do Sono")]
-    public float sleepDuration = 2f; // Tempo que os inimigos ficam parados
+    [Header("Sleep Configuration")]
+    public float sleepDuration = 2f; // The time enemies stay still
 
     private void Update()
     {
@@ -39,13 +39,13 @@ public class SleepEffect : AbilityBaseScript
 
         if (enemyStateManager != null)
         {
-            EnemyStates previousState = enemyStateManager.CurrentState; // Salva o estado antes de dormir
-            enemyStateManager.SetState(EnemyStates.Sleeping); // Muda para "Sleeping"
+            EnemyStates previousState = enemyStateManager.CurrentState; // Saves the state before sleeping
+            enemyStateManager.SetState(EnemyStates.Sleeping); // Changes to "Sleeping"
             sr.color = Color.blue;
 
-            yield return new WaitForSeconds(sleepDuration); // Espera o tempo do sono
+            yield return new WaitForSeconds(sleepDuration); // Waits for the sleep duration
 
-            // Se o inimigo ainda estiver vivo, retorna ao estado anterior
+            // If the enemy is still alive, return to the previous state
             if (enemy != null)
             {
                 enemyStateManager.SetState(previousState);
@@ -54,4 +54,3 @@ public class SleepEffect : AbilityBaseScript
         }
     }
 }
-
