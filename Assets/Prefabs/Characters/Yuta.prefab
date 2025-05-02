@@ -175,7 +175,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 324908714486055982}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -329,9 +329,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c72731090c752a646b397edcfa3cb49c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultValue: 50
+  defaultValue: 100
   currentValue: 0
   barsScript: {fileID: 0}
+  manaDrainPerSecond: 2
+  isDrainingMana: 1
 --- !u!114 &9003166929463570769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -347,7 +349,7 @@ MonoBehaviour:
   defaultValue: 80
   currentValue: 0
   barsScript: {fileID: 0}
-  moveScript: {fileID: 0}
+  moveScript: {fileID: 7150953695814880688}
 --- !u!114 &4471199820334860783
 MonoBehaviour:
   m_ObjectHideFlags: 0

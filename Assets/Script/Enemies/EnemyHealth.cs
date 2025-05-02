@@ -1,5 +1,4 @@
 using UnityEngine;
-using OkapiKit;
 
 public class EnemyHealth : ValuesScript
 {
@@ -20,12 +19,15 @@ public class EnemyHealth : ValuesScript
     public void TakeDamage(int dmgValue)
     {
         base.currentValue -= dmgValue;
-        base.calculatedValue = base.currentValue / base.defaultValue;
-        barsScript.AdjustLifeBar(base.calculatedValue);
+
+        if (barsScript != null)
+        {
+            base.calculatedValue = base.currentValue / base.defaultValue;
+            barsScript.AdjustLifeBar(base.calculatedValue);
+        }
 
         if (currentValue <= 0)
         {
-            EnemyCount.AddKill();
             Destroy(gameObject);
         }
 
