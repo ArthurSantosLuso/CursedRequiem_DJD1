@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -22,18 +23,6 @@ public class EnemyStateManager : MonoBehaviour
 
         CurrentState = newState;
 
-        if (newState == EnemyStates.Waiting)
-        {
-            if (waitCoroutine != null)
-                StopCoroutine(waitCoroutine);
-            waitCoroutine = StartCoroutine(WaitBeforePatrolling());
-        }
-    }
-
-    private IEnumerator WaitBeforePatrolling()
-    {
-        yield return new WaitForSeconds(2f);
-        SetState(EnemyStates.Patrolling);
     }
 
     /// <summary>
@@ -41,4 +30,9 @@ public class EnemyStateManager : MonoBehaviour
     /// </summary>
     /// <returns>Whether the enemy is sleeping.</returns>
     public bool IsSleeping() => CurrentState == EnemyStates.Sleeping;
+
+    private void Update()
+    {
+        Debug.Log(CurrentState);
+    }
 }

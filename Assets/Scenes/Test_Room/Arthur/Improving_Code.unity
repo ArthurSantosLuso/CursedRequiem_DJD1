@@ -211,6 +211,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 859557755510287543, guid: 377e98d288cfd304da7bba69fc1d93ed, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3609006877610313273, guid: 377e98d288cfd304da7bba69fc1d93ed, type: 3}
       propertyPath: patrolRadius
       value: 165
@@ -278,6 +282,10 @@ PrefabInstance:
     - target: {fileID: 5462417036230386799, guid: 377e98d288cfd304da7bba69fc1d93ed, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6333178544249151752, guid: 377e98d288cfd304da7bba69fc1d93ed, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 14.3
       objectReference: {fileID: 0}
     - target: {fileID: 6382728317336999501, guid: 377e98d288cfd304da7bba69fc1d93ed, type: 3}
       propertyPath: m_Name
@@ -361,6 +369,18 @@ PrefabInstance:
       propertyPath: barsScript
       value: 
       objectReference: {fileID: 825602199}
+    - target: {fileID: 294088963002731425, guid: 207f0eccd464b3e4d876c21949d3f6c1, type: 3}
+      propertyPath: defaultValue
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 294088963002731425, guid: 207f0eccd464b3e4d876c21949d3f6c1, type: 3}
+      propertyPath: isDrainingMana
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 294088963002731425, guid: 207f0eccd464b3e4d876c21949d3f6c1, type: 3}
+      propertyPath: manaDrainPerSecond
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 324908714486055982, guid: 207f0eccd464b3e4d876c21949d3f6c1, type: 3}
       propertyPath: m_Name
       value: Yuta
@@ -898,6 +918,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 152772115512788095, guid: a40e3537fccff6b41b6bfd03fde9f6e1, type: 3}
+      propertyPath: m_UsedByEffector
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2932461236513659303, guid: a40e3537fccff6b41b6bfd03fde9f6e1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -937,6 +961,10 @@ PrefabInstance:
     - target: {fileID: 2932461236513659303, guid: a40e3537fccff6b41b6bfd03fde9f6e1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6500334007713666801, guid: a40e3537fccff6b41b6bfd03fde9f6e1, type: 3}
+      propertyPath: m_UseColliderMask
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7496817263912798693, guid: a40e3537fccff6b41b6bfd03fde9f6e1, type: 3}
       propertyPath: m_Name
