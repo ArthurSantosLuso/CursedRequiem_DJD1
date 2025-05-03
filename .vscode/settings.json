@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "CursedRequiem_Projeto.sln"
+    "dotnet.defaultSolution": "DJD1.sln"
 }
