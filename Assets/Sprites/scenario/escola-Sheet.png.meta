@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      escola-Sheet_0: -2103005333329126769
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

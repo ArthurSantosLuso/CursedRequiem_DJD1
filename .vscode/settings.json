@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "DJD1.sln"
+    "dotnet.defaultSolution": "Projeto DJD1.sln"
 }
