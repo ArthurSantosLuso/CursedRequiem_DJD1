@@ -210,11 +210,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 324908714486055982, guid: 207f0eccd464b3e4d876c21949d3f6c1, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2455099336370941297, guid: 207f0eccd464b3e4d876c21949d3f6c1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2487
+      value: -2774
       objectReference: {fileID: 0}
     - target: {fileID: 2455099336370941297, guid: 207f0eccd464b3e4d876c21949d3f6c1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -428,7 +428,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b210bba8febcf564d8ba7bc72f2254b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 7645194398714494696, guid: 38e7892c797dc974fbeefe8df308357a, type: 3}
+  enemyPrefab: {fileID: 5743656358997514102, guid: 42c13db0dc8da394784f8b55c5bcab62, type: 3}
   spawnInterval: 1
   spawnPoint: {fileID: 846768669}
 --- !u!4 &1234127397
@@ -509,7 +509,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 100
-  rb: {fileID: 2015962481}
+  parentRb: {fileID: 2015962481}
 --- !u!4 &1790589309
 Transform:
   m_ObjectHideFlags: 0
