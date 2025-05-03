@@ -214,7 +214,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2455099336370941297, guid: 207f0eccd464b3e4d876c21949d3f6c1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2774
+      value: -2629.3
       objectReference: {fileID: 0}
     - target: {fileID: 2455099336370941297, guid: 207f0eccd464b3e4d876c21949d3f6c1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -634,7 +634,7 @@ GameObject:
   - component: {fileID: 2015962481}
   - component: {fileID: 2015962486}
   - component: {fileID: 2015962485}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SpawnerEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
