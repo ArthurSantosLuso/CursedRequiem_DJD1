@@ -1,76 +1,89 @@
-using System.Runtime.InteropServices;
-using System.Security;
-using System.Security.Cryptography;
-using System.Threading;
 using UnityEngine;
 
 public class FlyingEnemyAI : MonoBehaviour
 {
     [Header("Movement Settings")]
-    [SerializeField] private float moveSpeed = 3f;
+    [SerializeField] private float acceleration = 10f;
+    [SerializeField] private float maxSpeed = 5f;
+    [SerializeField] private float damping = 5f;
 
     [Header("Detection Settings")]
-    [SerializeField] private float detectionRadius = 5f;
+    [SerializeField] private float detectionRadius = 6f;
     [SerializeField] private LayerMask playerLayer;
 
     [Header("Lifetime Settings")]
-    [SerializeField] private float maxLifeTime = 5f;
+    [SerializeField] private float selfDestructTime = 5f;
+
+    [Header("Attack Settings")]
+    [SerializeField] private int onCollisionnDamage = 10;
 
     private Rigidbody2D rb;
     private Transform targetPlayer;
-    private float lifeTimer;
+    // private float lifeTimer;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        rb.gravityScale = 0f; // No gravity so it can fly
+        rb.gravityScale = 0f;
     }
 
     private void Start()
     {
-        lifeTimer = maxLifeTime;
+        // lifeTimer = selfDestructTime;
     }
 
     private void Update()
     {
-        HandleLifeTime();
+        // HandleLifetime();
         DetectPlayer();
     }
 
     private void FixedUpdate()
     {
-        MoveTowardsPlayer();
+        HandleMovement();
     }
 
     private void DetectPlayer()
     {
         Collider2D hit = Physics2D.OverlapCircle(transform.position, detectionRadius, playerLayer);
-        targetPlayer = hit != null ? hit.transform : null;
-
+        targetPlayer = hit ? hit.transform : null;
     }
 
-    private void MoveTowardsPlayer()
+    private void HandleMovement()
     {
         if (targetPlayer == null)
         {
-            rb.linearVelocity = Vector2.zero;
+            rb.linearVelocity = Vector2.Lerp(rb.linearVelocity, Vector2.zero, damping * Time.fixedDeltaTime);
             return;
         }
 
         Vector2 direction = (targetPlayer.position - transform.position).normalized;
-        rb.linearVelocity = new Vector2(direction.x * moveSpeed, rb.linearVelocityY);
+        //Vector2 velocity = new Vector2(direction.x * maxSpeed, rb.linearVelocityY);
+        Vector2 velocity = direction * maxSpeed;
+
+        rb.linearVelocity = Vector2.MoveTowards(rb.linearVelocity, velocity, acceleration * Time.fixedDeltaTime);
     }
+
+    //private void HandleLifetime()
+    //{
+    //    lifeTimer -= Time.deltaTime;
+    //    if (lifeTimer <= 0f)
+    //    {
+    //        Die();
+    //    }
+    //}
 
     private void Die()
     {
         Destroy(gameObject);
     }
 
-    private void HandleLifeTime()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        lifeTimer -= Time.deltaTime;
-        if(lifeTimer <= 0f)
+        PlayerHealthScript playerHealth = other.GetComponent<PlayerHealthScript>();
+        if (playerHealth != null)
         {
+            playerHealth.DamagePlayer(onCollisionnDamage);
             Die();
         }
     }

@@ -123,7 +123,7 @@ public class EnemyMeleeAttack : MonoBehaviour
         }
     }
 
-    private void OnDrawGizmos()
+    private void OnDrawGizmosSelected()
     {
         if (attackPoint != null)
         {

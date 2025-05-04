@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ac1c270f60c7e2647aa689e0a2d8af6e
+guid: 1632467c62aea2043a71a1253ddf5941
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1425251635732554843
-    second: entradaa_0
+      213: -77163482961389450
+    second: Pinheiro_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 1
+  spritePixelsToUnits: 0.5
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: entradaa_0
+      name: Pinheiro_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 2
         y: 0
-        width: 128
-        height: 128
+        width: 53
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5abdd98403d783ce0800000000000000
-      internalID: -1425251635732554843
+      spriteID: 6785478983cddeef0800000000000000
+      internalID: -77163482961389450
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      entradaa_0: -1425251635732554843
+      Pinheiro_0: -77163482961389450
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

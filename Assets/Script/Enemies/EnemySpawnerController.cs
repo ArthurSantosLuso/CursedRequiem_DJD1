@@ -14,6 +14,11 @@ public class EnemySpawnerController : MonoBehaviour
 
     private Transform player;
 
+    public bool IsPlayerInSpawnArea { get; private set; }
+    public bool IsAvoidingPlayer { get; private set; }
+    public Transform PlayerReference { get; private set; }
+
+
     void Update()
     {
         DetectPlayer();
@@ -29,18 +34,32 @@ public class EnemySpawnerController : MonoBehaviour
             player = detection.transform;
             spawner.StartSpawning();
 
+            IsPlayerInSpawnArea = true;
+            PlayerReference = player;
+
             if (avoidanceCheck)
+            {
                 avoidance.StartAvoiding(player);
+                IsAvoidingPlayer = true;
+            }
             else
+            {
                 avoidance.StopAvoiding();
+                IsAvoidingPlayer = false;
+            }
         }
         else
         {
             player = null;
+            PlayerReference = null;
+            IsPlayerInSpawnArea = false;
+            IsAvoidingPlayer = false;
+
             spawner.StopSpawning();
             avoidance.StopAvoiding();
         }
     }
+
 
     private void OnDrawGizmosSelected()
     {

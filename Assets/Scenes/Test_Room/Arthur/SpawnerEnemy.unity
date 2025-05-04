@@ -214,7 +214,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &257275980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1035,6 +1035,24 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 166372753675219576, guid: a40e3537fccff6b41b6bfd03fde9f6e1, type: 3}
+      propertyPath: _explanation
+      value: "When a collision with a bounding volume with tags [Player] starts:\n         
+        switches to scene DJD1_Prototype\n          sets variable mana to 100\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1020999709193188470, guid: a40e3537fccff6b41b6bfd03fde9f6e1, type: 3}
+      propertyPath: _explanation
+      value: "When a collision with a trigger with tags [Player] starts:\n         
+        switches to scene DJD1_Prototype\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296000894901207151, guid: a40e3537fccff6b41b6bfd03fde9f6e1, type: 3}
+      propertyPath: sceneName
+      value: DJD1_Prototype
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296000894901207151, guid: a40e3537fccff6b41b6bfd03fde9f6e1, type: 3}
+      propertyPath: _explanation
+      value: Switches to scene DJD1_Prototype
+      objectReference: {fileID: 0}
     - target: {fileID: 2932461236513659303, guid: a40e3537fccff6b41b6bfd03fde9f6e1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1075,12 +1093,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7088699034833332680, guid: a40e3537fccff6b41b6bfd03fde9f6e1, type: 3}
+      propertyPath: sceneName
+      value: DJD1_Prototype
+      objectReference: {fileID: 0}
+    - target: {fileID: 7088699034833332680, guid: a40e3537fccff6b41b6bfd03fde9f6e1, type: 3}
+      propertyPath: _explanation
+      value: Switches to scene DJD1_Prototype
+      objectReference: {fileID: 0}
     - target: {fileID: 7496817263912798693, guid: a40e3537fccff6b41b6bfd03fde9f6e1, type: 3}
       propertyPath: m_Name
       value: Grid
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 3730648752460418754, guid: a40e3537fccff6b41b6bfd03fde9f6e1, type: 3}
+    - {fileID: 1102173892243440314, guid: a40e3537fccff6b41b6bfd03fde9f6e1, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a40e3537fccff6b41b6bfd03fde9f6e1, type: 3}

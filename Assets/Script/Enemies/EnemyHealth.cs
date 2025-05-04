@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyHealth : ValuesScript
@@ -6,6 +7,11 @@ public class EnemyHealth : ValuesScript
 
     [SerializeField]
     private EnemyLifeBar barsScript;
+
+    [SerializeField]
+    private Transform player;
+
+    private bool isFacingRight = true;
 
     protected override void Start()
     {
@@ -19,6 +25,8 @@ public class EnemyHealth : ValuesScript
     public void TakeDamage(int dmgValue)
     {
         base.currentValue -= dmgValue;
+        ForceFlip();
+
 
         if (barsScript != null)
         {
@@ -31,5 +39,36 @@ public class EnemyHealth : ValuesScript
             Destroy(gameObject);
         }
 
+    }
+
+    // Change this later
+    void ForceFlip()
+    {
+        if (player == null) return;
+
+        float directionToPlayer = player.position.x - transform.position.x;
+
+        if (directionToPlayer > 0 && !isFacingRight)
+        {
+            RotateTowards(true);
+        }
+        else if (directionToPlayer < 0 && isFacingRight)
+        {
+            RotateTowards(false);
+        }
+    }
+
+    void RotateTowards(bool faceRight)
+    {
+        isFacingRight = faceRight;
+
+        float yRotation = faceRight ? 0f : 180f;
+
+        transform.rotation = Quaternion.Euler(0f, yRotation, 0f);
+    }
+
+    public void Kill()
+    {
+        Destroy(gameObject);
     }
 }

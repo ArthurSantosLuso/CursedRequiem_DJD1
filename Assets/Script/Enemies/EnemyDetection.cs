@@ -20,7 +20,7 @@ public class EnemyDetection : MonoBehaviour
         
     }
 
-    private void OnDrawGizmos()
+    private void OnDrawGizmosSelected()
     {
         if (detectionPoint != null)
         {

@@ -1,3 +1,4 @@
+using OkapiKit;
 using System.Collections;
 using System.Diagnostics.Tracing;
 using Unity.VisualScripting;
@@ -25,6 +26,11 @@ public class PlayerMovement : MonoBehaviour
     private float jumpMaxDuration;
     [SerializeField]
     private float jumpGravity;
+    //[SerializeField]
+    //private AudioSource audioSource;
+    //[SerializeField]
+    //private AudioClip footstepAudio;
+
 
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
@@ -91,7 +97,21 @@ public class PlayerMovement : MonoBehaviour
         // GetComponent<CapsuleCollider2D>().enabled = isGrounded;
         // GetComponent<BoxCollider2D>().enabled = !isGrounded;
 
-        animator.SetBool("IsGrounded", isGrounded);
+        // VFX Not working
+        //if (Mathf.Abs(rb.linearVelocityX) != 0.1f /*&& Mathf.Abs(rb.linearVelocityY) < 0.1f*/) 
+        //{
+        //    if (!audioSource)
+        //    {
+        //        audioSource.clip = footstepAudio;
+        //        audioSource.Play();
+        //    }
+        //}
+        //else
+        //{
+        //    audioSource.Stop();
+        //}
+
+            animator.SetBool("IsGrounded", isGrounded);
         animator.SetFloat("AbsVelocityX", Mathf.Abs(currentVelocity.x));
         animator.SetFloat("VelocityY", currentVelocity.y);
     }
@@ -120,4 +140,5 @@ public class PlayerMovement : MonoBehaviour
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
     }
+
 }
