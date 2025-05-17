@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.Rendering;
 
-public class FollowPath : MonoBehaviour
+public class EnemyPath : MonoBehaviour
 {
     [SerializeField]
     private Transform[] waypoints;
