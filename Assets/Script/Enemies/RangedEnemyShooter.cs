@@ -1,7 +1,4 @@
-using Unity.VisualScripting;
-using UnityEditor.Tilemaps;
 using UnityEngine;
-using UnityEngine.Rendering;
 
 public class RangedEnemyShooter : MonoBehaviour
 {
