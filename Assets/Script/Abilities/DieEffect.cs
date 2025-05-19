@@ -1,6 +1,5 @@
 using System.Collections;
 using UnityEngine;
-using OkapiKit;
 
 public class DieEffect : AbilityBaseScript
 {

@@ -328,20 +328,6 @@
       },
       "url": "https://packages.unity.com"
     },
-    "com.videojogoslusofona.okapikit": {
-      "version": "https://github.com/VideojogosLusofona/OkapiKit.git#upm",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "bfdf9f9475725827c71df955607ce38059e5a7c4"
-    },
-    "com.videojogoslusofona.okapikit.samples": {
-      "version": "https://github.com/VideojogosLusofona/OkapiKit.git#samples",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "2428671beb703596a4ef8734092d11fa17b99498"
-    },
     "com.unity.modules.accessibility": {
       "version": "1.0.0",
       "depth": 0,
