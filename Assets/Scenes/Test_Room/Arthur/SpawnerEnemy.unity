@@ -473,6 +473,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lamp_Post
       objectReference: {fileID: 0}
+    - target: {fileID: 9166437166268627540, guid: 4087449b9bfff284fad249c632c3ae8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -608,24 +612,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 166372753675219576, guid: a40e3537fccff6b41b6bfd03fde9f6e1, type: 3}
-      propertyPath: _explanation
-      value: "When a collision with a bounding volume with tags [Player] starts:\n         
-        switches to scene DJD1_Prototype\n          sets variable mana to 100\n"
-      objectReference: {fileID: 0}
-    - target: {fileID: 1020999709193188470, guid: a40e3537fccff6b41b6bfd03fde9f6e1, type: 3}
-      propertyPath: _explanation
-      value: "When a collision with a trigger with tags [Player] starts:\n         
-        switches to scene DJD1_Prototype\n"
-      objectReference: {fileID: 0}
-    - target: {fileID: 2296000894901207151, guid: a40e3537fccff6b41b6bfd03fde9f6e1, type: 3}
-      propertyPath: sceneName
-      value: DJD1_Prototype
-      objectReference: {fileID: 0}
-    - target: {fileID: 2296000894901207151, guid: a40e3537fccff6b41b6bfd03fde9f6e1, type: 3}
-      propertyPath: _explanation
-      value: Switches to scene DJD1_Prototype
-      objectReference: {fileID: 0}
     - target: {fileID: 2932461236513659303, guid: a40e3537fccff6b41b6bfd03fde9f6e1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -666,46 +652,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6946095255283833501, guid: a40e3537fccff6b41b6bfd03fde9f6e1, type: 3}
-      propertyPath: m_SortingLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6946095255283833501, guid: a40e3537fccff6b41b6bfd03fde9f6e1, type: 3}
-      propertyPath: m_SortingOrder
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6946095255283833501, guid: a40e3537fccff6b41b6bfd03fde9f6e1, type: 3}
-      propertyPath: m_SortingLayerID
-      value: -1233987499
-      objectReference: {fileID: 0}
-    - target: {fileID: 7088699034833332680, guid: a40e3537fccff6b41b6bfd03fde9f6e1, type: 3}
-      propertyPath: sceneName
-      value: DJD1_Prototype
-      objectReference: {fileID: 0}
-    - target: {fileID: 7088699034833332680, guid: a40e3537fccff6b41b6bfd03fde9f6e1, type: 3}
-      propertyPath: _explanation
-      value: Switches to scene DJD1_Prototype
-      objectReference: {fileID: 0}
     - target: {fileID: 7496817263912798693, guid: a40e3537fccff6b41b6bfd03fde9f6e1, type: 3}
       propertyPath: m_Name
       value: Grid
       objectReference: {fileID: 0}
-    - target: {fileID: 8329005418784378890, guid: a40e3537fccff6b41b6bfd03fde9f6e1, type: 3}
-      propertyPath: m_SortingLayer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8329005418784378890, guid: a40e3537fccff6b41b6bfd03fde9f6e1, type: 3}
-      propertyPath: m_SortingOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8329005418784378890, guid: a40e3537fccff6b41b6bfd03fde9f6e1, type: 3}
-      propertyPath: m_SortingLayerID
-      value: -181606871
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 3730648752460418754, guid: a40e3537fccff6b41b6bfd03fde9f6e1, type: 3}
-    - {fileID: 1102173892243440314, guid: a40e3537fccff6b41b6bfd03fde9f6e1, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a40e3537fccff6b41b6bfd03fde9f6e1, type: 3}
