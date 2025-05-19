@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8508588375314335377}
   - component: {fileID: 807849744443598895}
   - component: {fileID: 3104449061290912132}
-  - component: {fileID: 1909267641893070269}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -138,39 +137,3 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
---- !u!114 &1909267641893070269
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7419443906244857090}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9acff5f09ab58e479b806a70160b1c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _showInfo: 1
-  _explanation: 'Camera follows the closest object tagged with [Player].
-
-    It
-    will trail the target, closing 90% of the distance each second.
-
-    The camera
-    won''t leave the area defined by CameraBoundingBox.'
-  description: 
-  mode: 2
-  targetTag: {fileID: 11400000, guid: a6867e8f47561dd47addd221d82d3e1b, type: 2}
-  tagMode: 0
-  allowZoom: 1
-  zoomMargin: 1.1
-  minMaxSize: {x: 180, y: 360}
-  targetObject: {fileID: 0}
-  followSpeed: 0.9
-  rect:
-    serializedVersion: 2
-    x: -100
-    y: -100
-    width: 200
-    height: 200
-  cameraLimits: {fileID: 0}

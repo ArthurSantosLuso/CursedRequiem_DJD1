@@ -197,6 +197,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 188023854429856056, guid: 4a8d5db9b4d51e84c95fe9cbebd60400, type: 3}
   m_PrefabInstance: {fileID: 5152207185746900293}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &433008123 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2455099336370941297, guid: 207f0eccd464b3e4d876c21949d3f6c1, type: 3}
+  m_PrefabInstance: {fileID: 512850206}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &512850206
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1022,6 +1027,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1899142310 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7419443906244857090, guid: 5bf76182315f8e44fb616d90ffc8e434, type: 3}
+  m_PrefabInstance: {fileID: 4772369086428792585}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1920907532 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3054706485377067415, guid: 5bf76182315f8e44fb616d90ffc8e434, type: 3}
@@ -1032,6 +1042,22 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 8508588375314335377, guid: 5bf76182315f8e44fb616d90ffc8e434, type: 3}
   m_PrefabInstance: {fileID: 4772369086428792585}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1920907540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1899142310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55583f9e9bca58d41978d7983d5b554d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 433008123}
+  followSpeed: 12
+  offset: {x: 0, y: 110}
+  boundary: {fileID: 2092555407}
 --- !u!1 &1926212817 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3720375715721521598, guid: 9bf4547cf50b5c4428445db2710a78b0, type: 3}
@@ -1123,7 +1149,10 @@ PrefabInstance:
     - {fileID: 1909267641893070269, guid: 5bf76182315f8e44fb616d90ffc8e434, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7419443906244857090, guid: 5bf76182315f8e44fb616d90ffc8e434, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1920907540}
   m_SourcePrefab: {fileID: 100100000, guid: 5bf76182315f8e44fb616d90ffc8e434, type: 3}
 --- !u!1001 &5152207185746900293
 PrefabInstance:
