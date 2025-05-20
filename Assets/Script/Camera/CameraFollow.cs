@@ -19,7 +19,6 @@ public class CameraFollow : MonoBehaviour
     {
         cam = GetComponent<Camera>();
 
-        // Verifica se há um collider de limites
         if (boundary != null)
         {
             Bounds bounds = boundary.bounds;
@@ -27,7 +26,6 @@ public class CameraFollow : MonoBehaviour
             maxBounds = bounds.max;
         }
 
-        // Calcula metade da largura e altura da câmera
         halfHeight = cam.orthographicSize;
         halfWidth = halfHeight * cam.aspect;
     }
@@ -37,14 +35,11 @@ public class CameraFollow : MonoBehaviour
         if (target == null)
             return;
 
-        // Define a posição alvo com offset
         Vector3 targetPosition = target.position + (Vector3)offset;
-        targetPosition.z = transform.position.z; // Mantém a profundidade da câmera
+        targetPosition.z = transform.position.z;
 
-        // Suaviza o movimento da câmera
         Vector3 smoothedPosition = Vector3.Lerp(transform.position, targetPosition, followSpeed * Time.deltaTime);
 
-        // Restringe a posição dentro dos limites, considerando o tamanho da câmera
         if (boundary != null)
         {
             float clampedX = Mathf.Clamp(smoothedPosition.x, minBounds.x + halfWidth, maxBounds.x - halfWidth);
@@ -52,7 +47,6 @@ public class CameraFollow : MonoBehaviour
             smoothedPosition = new Vector3(clampedX, clampedY, smoothedPosition.z);
         }
 
-        // Aplica a posição final à câmera
         transform.position = smoothedPosition;
     }
 }
