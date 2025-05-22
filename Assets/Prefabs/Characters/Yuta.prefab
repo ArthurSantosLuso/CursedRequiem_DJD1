@@ -14,14 +14,13 @@ GameObject:
   - component: {fileID: 8406674768914277402}
   - component: {fileID: 2593955251039600137}
   - component: {fileID: 1540821808898199751}
-  - component: {fileID: 6524026033706785650}
-  - component: {fileID: 2437527708548702492}
   - component: {fileID: 6616850915215323930}
   - component: {fileID: 3636757481611604923}
   - component: {fileID: 294088963002731425}
   - component: {fileID: 9003166929463570769}
   - component: {fileID: 4471199820334860783}
   - component: {fileID: 7150953695814880688}
+  - component: {fileID: 1529263814592248326}
   m_Layer: 10
   m_Name: Yuta
   m_TagString: Player
@@ -116,7 +115,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 9.8
+  m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 1
@@ -236,58 +235,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &6524026033706785650
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 324908714486055982}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6fc8a1e9dd21634a9cb00402422ec6c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _showInfo: 1
-  _explanation: 
-  description: 
-  hypertags:
-  - {fileID: 11400000, guid: a6867e8f47561dd47addd221d82d3e1b, type: 2}
---- !u!114 &2437527708548702492
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 324908714486055982}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac24d8e98e97620458dc0c6fbe26a958, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _showInfo: 1
-  _explanation: "Run Button Down\n----------------\nWhen button Run is pressed:\n         
-    [NULL]\nelse\n          [NULL]\n"
-  description: Run Button Down
-  enableTrigger: 1
-  allowRetrigger: 1
-  hasPreconditions: 0
-  preConditions: []
-  actions:
-  - delay: 0
-    action: {fileID: 0}
-  inputType: 0
-  buttonName: Run
-  key: 0
-  axis: 
-  deadArea: {x: -0.2, y: 0.2}
-  continuous: 0
-  negate: 0
-  useCooldown: 0
-  cooldown: 1
-  elseActions:
-  - delay: 0
-    action: {fileID: 0}
 --- !u!114 &6616850915215323930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -333,7 +280,7 @@ MonoBehaviour:
   currentValue: 0
   barsScript: {fileID: 0}
   manaDrainPerSecond: 2
-  isDrainingMana: 1
+  isDrainingMana: 0
 --- !u!114 &9003166929463570769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -374,15 +321,112 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7620009f29f96334b9d875b9d82bcdbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: {x: 200, y: 250}
+  velocity: {x: 200, y: 220}
   horizontalAxisName: Horizontal
   groundCheck: {fileID: 6169250352050036761}
   groundCheckRadius: 4
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
-  jumpMaxDuration: 0.5
+  jumpMaxDuration: 0.3
   jumpGravity: 0.4
+--- !u!82 &1529263814592248326
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324908714486055982}
+  m_Enabled: 0
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 16f42eb86f2e4064cb510b08520d375b, type: 3}
+  m_Resource: {fileID: 8300000, guid: 16f42eb86f2e4064cb510b08520d375b, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &422818653686659496
 GameObject:
   m_ObjectHideFlags: 0
@@ -393,7 +437,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8099246200873324095}
   - component: {fileID: 8929745515419650384}
-  - component: {fileID: 5148069746592705935}
   m_Layer: 0
   m_Name: ExitCheck
   m_TagString: Untagged
@@ -462,23 +505,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 13.911133, y: 11.986877}
   m_EdgeRadius: 0
---- !u!114 &5148069746592705935
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 422818653686659496}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6fc8a1e9dd21634a9cb00402422ec6c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _showInfo: 1
-  _explanation: 
-  description: 
-  hypertags:
-  - {fileID: 11400000, guid: 15edcc3cfa00a4e2fba5f80bcf8774c8, type: 2}
 --- !u!1 &3431310630417557532
 GameObject:
   m_ObjectHideFlags: 0
@@ -698,9 +724,9 @@ MonoBehaviour:
   effectSprite: {fileID: 3402085431411728207}
   effectCollider: {fileID: 5854598027486613862}
   effectDuration: 0.5
-  manaCost: 10
+  manaCost: 20
   manaScript: {fileID: 294088963002731425}
-  sleepDuration: 4
+  sleepDuration: 1.5
 --- !u!1 &5713644132766750847
 GameObject:
   m_ObjectHideFlags: 0
@@ -795,9 +821,9 @@ MonoBehaviour:
   effectSprite: {fileID: 3402085431411728207}
   effectCollider: {fileID: 2620204640073936808}
   effectDuration: 0.5
-  manaCost: 30
+  manaCost: 40
   manaScript: {fileID: 294088963002731425}
-  dmgValue: 40
+  dmgValue: 50
 --- !u!1 &7323334798098423192
 GameObject:
   m_ObjectHideFlags: 0

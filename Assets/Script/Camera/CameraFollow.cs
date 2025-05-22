@@ -30,7 +30,7 @@ public class CameraFollow : MonoBehaviour
         halfWidth = halfHeight * cam.aspect;
     }
 
-    void LateUpdate()
+    void FixedUpdate()
     {
         if (target == null)
             return;
