@@ -1,16 +1,25 @@
 fileFormatVersion: 2
-guid: a4278de9c5f52894aba38fff3b5bead4
+guid: 490eee6b51c67b743a646f90e99181bd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2228076854000253249
-    second: inimigo 32x32 - idle-Sheet_0
+      213: 6941925619968800357
+    second: inimigo walk 32x32-Sheet_0
   - first:
-      213: 8558623391139632173
-    second: inimigo 32x32 - idle-Sheet_1
+      213: 18124979041971492
+    second: inimigo walk 32x32-Sheet_1
   - first:
-      213: -5865891134694299450
-    second: inimigo 32x32 - idle-Sheet_2
+      213: -6930074120530427269
+    second: inimigo walk 32x32-Sheet_2
+  - first:
+      213: 2799397780899012883
+    second: inimigo walk 32x32-Sheet_3
+  - first:
+      213: -1172533982248470567
+    second: inimigo walk 32x32-Sheet_4
+  - first:
+      213: -1608293108419217556
+    second: inimigo walk 32x32-Sheet_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -106,7 +115,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MeleeIdle2_0
+      name: MeleeMove_0
       rect:
         serializedVersion: 2
         x: 0
@@ -121,14 +130,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f9301a13306dd22488b2425dada23a65
-      internalID: -320461534
+      spriteID: 3cb99908e6ee63b4eaeb7204ced23738
+      internalID: -795573517
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeIdle2_1
+      name: MeleeMove_1
       rect:
         serializedVersion: 2
         x: 32
@@ -143,14 +152,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3348b8ef6041a634495696e29f8383e6
-      internalID: 64581452
+      spriteID: daebd37e945ca964b9ad78391d78561e
+      internalID: 201460366
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeIdle2_2
+      name: MeleeMove_2
       rect:
         serializedVersion: 2
         x: 64
@@ -165,8 +174,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a96fb784e79af114d9b1d789f60b6a64
-      internalID: 1293562690
+      spriteID: cd42d5ed4e0e28f4c9d44fcba0b954b3
+      internalID: 2074811950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeMove_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c41776fa2103ba49bd2ae8fc3e8758a
+      internalID: -1243021233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeMove_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd67a98e153bdd040a1a38db2d371f35
+      internalID: -716552073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeMove_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74e58eff914189e4e863e7ee343254df
+      internalID: -1155672633
       vertices: []
       indices: 
       edges: []
@@ -175,7 +250,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 7378b0e7dc9304640a684696f03933bc
+    spriteID: 3b5ada5cb79d07a40bdcbc443f3a5f78
     internalID: 0
     vertices: []
     indices: 
@@ -185,9 +260,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      MeleeIdle2_0: -320461534
-      MeleeIdle2_1: 64581452
-      MeleeIdle2_2: 1293562690
+      MeleeMove_0: -795573517
+      MeleeMove_1: 201460366
+      MeleeMove_2: 2074811950
+      MeleeMove_3: -1243021233
+      MeleeMove_4: -716552073
+      MeleeMove_5: -1155672633
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

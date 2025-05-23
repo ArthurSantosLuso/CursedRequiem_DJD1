@@ -1,16 +1,19 @@
 fileFormatVersion: 2
-guid: a4278de9c5f52894aba38fff3b5bead4
+guid: 977c7cadc49c709449d5884879b43c91
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2228076854000253249
-    second: inimigo 32x32 - idle-Sheet_0
+      213: 3364535672289885342
+    second: inimigo melee - 32x32-Sheet_0
   - first:
-      213: 8558623391139632173
-    second: inimigo 32x32 - idle-Sheet_1
+      213: 5986145331863412505
+    second: inimigo melee - 32x32-Sheet_1
   - first:
-      213: -5865891134694299450
-    second: inimigo 32x32 - idle-Sheet_2
+      213: 1713105817042934481
+    second: inimigo melee - 32x32-Sheet_2
+  - first:
+      213: -4467654640271059814
+    second: inimigo melee - 32x32-Sheet_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -121,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f9301a13306dd22488b2425dada23a65
-      internalID: -320461534
+      spriteID: 7518f1635a0d87848b0962d37573bb48
+      internalID: -376615775
       vertices: []
       indices: 
       edges: []
@@ -143,8 +146,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3348b8ef6041a634495696e29f8383e6
-      internalID: 64581452
+      spriteID: 04649f60b6174144c93cc582ca54c226
+      internalID: 772577723
       vertices: []
       indices: 
       edges: []
@@ -165,8 +168,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a96fb784e79af114d9b1d789f60b6a64
-      internalID: 1293562690
+      spriteID: fce6129fdff5bf947bdc12ac7f5adc7a
+      internalID: -2032423830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeIdle2_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15852a7cd48a6c8468549cdda5d2ea75
+      internalID: -1202559676
       vertices: []
       indices: 
       edges: []
@@ -175,7 +200,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 7378b0e7dc9304640a684696f03933bc
+    spriteID: c296a3b14693ee946930912e112ff80f
     internalID: 0
     vertices: []
     indices: 
@@ -185,9 +210,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      MeleeIdle2_0: -320461534
-      MeleeIdle2_1: 64581452
-      MeleeIdle2_2: 1293562690
+      MeleeIdle2_0: -376615775
+      MeleeIdle2_1: 772577723
+      MeleeIdle2_2: -2032423830
+      MeleeIdle2_3: -1202559676
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
