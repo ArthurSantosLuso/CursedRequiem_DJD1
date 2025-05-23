@@ -5682,7 +5682,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1782428882603167725, guid: ed6ef76805f2c9a409ee5f55df8940fd, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1782428882603167725, guid: ed6ef76805f2c9a409ee5f55df8940fd, type: 3}
       propertyPath: m_LocalRotation.x
@@ -5690,7 +5690,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1782428882603167725, guid: ed6ef76805f2c9a409ee5f55df8940fd, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1782428882603167725, guid: ed6ef76805f2c9a409ee5f55df8940fd, type: 3}
       propertyPath: m_LocalRotation.z
@@ -5702,7 +5702,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1782428882603167725, guid: ed6ef76805f2c9a409ee5f55df8940fd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 1782428882603167725, guid: ed6ef76805f2c9a409ee5f55df8940fd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -5711,6 +5711,10 @@ PrefabInstance:
     - target: {fileID: 5256933486326320228, guid: ed6ef76805f2c9a409ee5f55df8940fd, type: 3}
       propertyPath: m_Name
       value: Geto
+      objectReference: {fileID: 0}
+    - target: {fileID: 7774316373116907449, guid: ed6ef76805f2c9a409ee5f55df8940fd, type: 3}
+      propertyPath: m_FlipX
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5773,7 +5777,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateManager: {fileID: 1992007790}
   meleePosition: {fileID: 1223734541}
+  timeStayMelee: 2
   rangedPosition: {fileID: 1793043680}
+  timeStayRanged: 2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -13,6 +13,9 @@ GameObject:
   - component: {fileID: 7262204518155696603}
   - component: {fileID: 4225234106905289666}
   - component: {fileID: 1357890109117166781}
+  - component: {fileID: 2673737950747222442}
+  - component: {fileID: 167262704740583620}
+  - component: {fileID: 5326042871496672995}
   m_Layer: 0
   m_Name: Geto
   m_TagString: Untagged
@@ -185,3 +188,48 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2673737950747222442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5256933486326320228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad68ad3dfd7f5ff45bf4475dc8c1af0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultValue: 10
+  currentValue: 0
+  barsScript: {fileID: 0}
+  player: {fileID: 0}
+--- !u!114 &167262704740583620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5256933486326320228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38d164f66f0ef23488b9ec47f09de9e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stateManager: {fileID: 5326042871496672995}
+  meleePosition: {fileID: 0}
+  timeStayMelee: 2
+  rangedPosition: {fileID: 0}
+  timeStayRanged: 2
+--- !u!114 &5326042871496672995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5256933486326320228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ed4a45d69be424d8de153385775007, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

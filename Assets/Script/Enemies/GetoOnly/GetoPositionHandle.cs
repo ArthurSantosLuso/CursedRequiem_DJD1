@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Runtime.InteropServices;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -6,15 +7,13 @@ public class GetoPositionHandle : MonoBehaviour
 {
     [SerializeField] private GetoStateManager stateManager;
 
+    [Header("Positions Configuration")]
     [SerializeField] private Transform meleePosition;
+    [SerializeField] private float timeStayMelee;
     [SerializeField] private Transform rangedPosition;
+    [SerializeField] private float timeStayRanged;
 
-    private Animator animator;
-
-    private void Start()
-    {
-        animator = GetComponent<Animator>();
-    }
+    private Coroutine stateTimer;
 
     private void OnEnable()
     {
@@ -44,17 +43,33 @@ public class GetoPositionHandle : MonoBehaviour
         {
             transform.position = target.position;
             Debug.Log("Boss teleportado para: " + target.name);
+
+            if (stateTimer != null)
+                StopCoroutine(stateTimer);
+
+            stateTimer = StartCoroutine(StateTimerRoutine());
         }
     }
 
-    private void Update()
+    private IEnumerator StateTimerRoutine()
     {
-        if (Input.GetKeyDown(KeyCode.L))
+        float waitTime = 0f;
+
+        switch (stateManager.CurrentState)
         {
-            if (stateManager.CurrentState == GetoStates.Ranged)
-                stateManager.SetState(GetoStates.Melee);
-            else
-                stateManager.SetState(GetoStates.Ranged);
+            case GetoStates.Melee:
+                waitTime = timeStayMelee;
+                break;
+            case GetoStates.Ranged:
+                waitTime = timeStayRanged;
+                break;
         }
+
+        yield return new WaitForSeconds(waitTime);
+
+        if (stateManager.CurrentState == GetoStates.Melee)
+            stateManager.SetState(GetoStates.Ranged);
+        else
+            stateManager.SetState(GetoStates.Melee);
     }
 }
