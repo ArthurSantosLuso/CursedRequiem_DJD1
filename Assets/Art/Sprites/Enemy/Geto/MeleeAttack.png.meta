@@ -1,19 +1,22 @@
 fileFormatVersion: 2
-guid: 977c7cadc49c709449d5884879b43c91
+guid: 90d8b8a12d6e4a044b49530d36f339ee
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3364535672289885342
-    second: inimigo melee - 32x32-Sheet_0
+      213: 9135700221931609013
+    second: dragao ugh-Sheet_0
   - first:
-      213: 5986145331863412505
-    second: inimigo melee - 32x32-Sheet_1
+      213: -3043732825932465196
+    second: dragao ugh-Sheet_1
   - first:
-      213: 1713105817042934481
-    second: inimigo melee - 32x32-Sheet_2
+      213: 25233373878067862
+    second: dragao ugh-Sheet_2
   - first:
-      213: -4467654640271059814
-    second: inimigo melee - 32x32-Sheet_3
+      213: 4609058420627646001
+    second: dragao ugh-Sheet_3
+  - first:
+      213: 5075754754856411307
+    second: dragao ugh-Sheet_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -105,106 +108,71 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MeleeIdle2_0
+      name: dragao ugh-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 7518f1635a0d87848b0962d37573bb48
-      internalID: -376615775
+      spriteID: 5bbd0b6e2f688ce70800000000000000
+      internalID: 9135700221931609013
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeIdle2_1
+      name: dragao ugh-Sheet_1
       rect:
         serializedVersion: 2
-        x: 32
+        x: 128
         y: 0
-        width: 32
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 04649f60b6174144c93cc582ca54c226
-      internalID: 772577723
+      spriteID: 4db79170f1d72c5d0800000000000000
+      internalID: -3043732825932465196
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeIdle2_2
+      name: dragao ugh-Sheet_2
       rect:
         serializedVersion: 2
-        x: 64
+        x: 256
         y: 0
-        width: 32
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: fce6129fdff5bf947bdc12ac7f5adc7a
-      internalID: -2032423830
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MeleeIdle2_3
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 15852a7cd48a6c8468549cdda5d2ea75
-      internalID: -1202559676
+      spriteID: 692ac7eae95a95000800000000000000
+      internalID: 25233373878067862
       vertices: []
       indices: 
       edges: []
@@ -213,7 +181,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: c296a3b14693ee946930912e112ff80f
+    spriteID: 8848d8d2ed2d3ca4b9f5bdfae51a81e3
     internalID: 0
     vertices: []
     indices: 
@@ -223,10 +191,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      MeleeIdle2_0: -376615775
-      MeleeIdle2_1: 772577723
-      MeleeIdle2_2: -2032423830
-      MeleeIdle2_3: -1202559676
+      dragao ugh-Sheet_0: 9135700221931609013
+      dragao ugh-Sheet_1: -3043732825932465196
+      dragao ugh-Sheet_2: 25233373878067862
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
