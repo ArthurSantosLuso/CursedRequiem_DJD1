@@ -5779,6 +5779,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3112088514122319234, guid: ed6ef76805f2c9a409ee5f55df8940fd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 403.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3112088514122319234, guid: ed6ef76805f2c9a409ee5f55df8940fd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -64.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5055726700393974644, guid: ed6ef76805f2c9a409ee5f55df8940fd, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 9a1ab27cb1a8a86448f1a9d9fce2a604, type: 2}
     - target: {fileID: 5256933486326320228, guid: ed6ef76805f2c9a409ee5f55df8940fd, type: 3}
       propertyPath: m_Name
       value: Geto
@@ -5791,6 +5803,26 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 59200193}
+    - target: {fileID: 7712500970296836321, guid: ed6ef76805f2c9a409ee5f55df8940fd, type: 3}
+      propertyPath: m_Size.x
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 7712500970296836321, guid: ed6ef76805f2c9a409ee5f55df8940fd, type: 3}
+      propertyPath: m_Size.y
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 7712500970296836321, guid: ed6ef76805f2c9a409ee5f55df8940fd, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 7002881656674357156, guid: dd57adc71a6aca641aa28ef369473f32, type: 3}
+    - target: {fileID: 7712500970296836321, guid: ed6ef76805f2c9a409ee5f55df8940fd, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7712500970296836321, guid: ed6ef76805f2c9a409ee5f55df8940fd, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7762882378977800417, guid: ed6ef76805f2c9a409ee5f55df8940fd, type: 3}
       propertyPath: meleePosition
       value: 
@@ -5803,6 +5835,10 @@ PrefabInstance:
       propertyPath: rangedPosition
       value: 
       objectReference: {fileID: 1793043680}
+    - target: {fileID: 7880497461887777011, guid: ed6ef76805f2c9a409ee5f55df8940fd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
