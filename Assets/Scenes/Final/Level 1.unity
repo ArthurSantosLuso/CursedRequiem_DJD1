@@ -4826,10 +4826,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Yuta
       objectReference: {fileID: 0}
-    - target: {fileID: 422818653686659496, guid: 207f0eccd464b3e4d876c21949d3f6c1, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2455099336370941297, guid: 207f0eccd464b3e4d876c21949d3f6c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1263
@@ -4868,14 +4864,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2455099336370941297, guid: 207f0eccd464b3e4d876c21949d3f6c1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8603952739000835734, guid: 207f0eccd464b3e4d876c21949d3f6c1, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 6200000, guid: 4a67ccfe5ed169147b3b688386431f43, type: 2}
-    - target: {fileID: 8929745515419650384, guid: 207f0eccd464b3e4d876c21949d3f6c1, type: 3}
-      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9003166929463570769, guid: 207f0eccd464b3e4d876c21949d3f6c1, type: 3}
