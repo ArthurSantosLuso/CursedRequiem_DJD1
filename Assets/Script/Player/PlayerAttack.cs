@@ -40,22 +40,20 @@ public class PlayerAttack : MonoBehaviour
         absVelocityX = anim.GetFloat("AbsVelocityX");
 
         if (Input.GetKeyDown(KeyCode.Mouse0))
-            Attack("LightAttack");
-        //else if (Input.GetKeyDown(KeyCode.Mouse1))
-        //Attack("HeavyAttack");
+            Attack();
 
     }
 
-    private void FixedUpdate()
+    private void Attack()
     {
-        if (isAttacking)
-            rig.linearVelocity = Vector2.zero;
-    }
-
-    private void Attack(string attackType)
-    {
-        if (grounded && (absVelocityX <= 200 && absVelocityX >= -200) && !isAttacking)
-            anim.SetTrigger(attackType);
+        if (grounded && Mathf.Abs(absVelocityX) < 0.1f && !isAttacking)
+        {
+            anim.SetTrigger("LightAttack_Idle");
+        }
+        else if(grounded && !isAttacking)
+        {
+            anim.SetTrigger("LightAttack_Move");
+        }
     }
 
     #region Methods called by Animation Events
