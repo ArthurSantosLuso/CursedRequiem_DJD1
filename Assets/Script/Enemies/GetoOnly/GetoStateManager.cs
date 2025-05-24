@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class GetoStateManager : MonoBehaviour
 {
+    // This script takes care of Geto's states. Waiting, Melee and Ranged.
+
     public GetoStates CurrentState { get; private set; }
 
     public delegate void OnStateAnimationComplete();
@@ -13,18 +15,19 @@ public class GetoStateManager : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-        SetState(GetoStates.Ranged);
+        SetState(GetoStates.Melee);
     }
 
+    /// <summary>
+    /// Set new a state for Geto.
+    /// </summary>
+    /// <param name="newState">The new required state</param>
     public void SetState(GetoStates newState)
     {
         CurrentState = newState;
 
         switch (newState)
         {
-            //case GetoStates.Waiting:
-            //    animator.Play("Idle");
-            //    break;
             case GetoStates.Ranged:
                 animator.SetTrigger("Tp");
                 break;
@@ -34,7 +37,7 @@ public class GetoStateManager : MonoBehaviour
         }
     }
 
-    // Este metodo vai ser chamado no final da animação pelo animation event
+    // This metodh will be called after the teleport animation ends by animation event
     public void NotifyAnimationFinished()
     {
         OnAnimationComplete?.Invoke();

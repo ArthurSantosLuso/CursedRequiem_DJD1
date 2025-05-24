@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class GetoPositionHandle : MonoBehaviour
 {
+    // This script handles Geto's position when ranged or melee.
+
     [SerializeField] private GetoStateManager stateManager;
 
     [Header("Positions Configuration")]
@@ -12,6 +14,10 @@ public class GetoPositionHandle : MonoBehaviour
     [SerializeField] private float timeStayMelee;
     [SerializeField] private Transform rangedPosition;
     [SerializeField] private float timeStayRanged;
+
+    [Header("Other Configuration")]
+    [SerializeField] private GetoAttackHandler attackHandler;
+
 
     private Coroutine stateTimer;
 
@@ -25,6 +31,9 @@ public class GetoPositionHandle : MonoBehaviour
         stateManager.OnAnimationComplete -= TeleportBossToStatePosition;
     }
 
+    /// <summary>
+    /// Changes Geto position depending on his current state.
+    /// </summary>
     private void TeleportBossToStatePosition()
     {
         Transform target = null;
@@ -41,16 +50,25 @@ public class GetoPositionHandle : MonoBehaviour
 
         if (target != null)
         {
+            // Chage position
             transform.position = target.position;
-            Debug.Log("Boss teleportado para: " + target.name);
 
+            // Stop last state timer
             if (stateTimer != null)
                 StopCoroutine(stateTimer);
 
+            // Notify the attack script to start the attacking logic
+            attackHandler.StartAttackSequence();
+
+            //Start current state timer
             stateTimer = StartCoroutine(StateTimerRoutine());
         }
     }
 
+    /// <summary>
+    /// Routine that handles the switching between states.
+    /// </summary>
+    /// <returns>Waits the state staying time</returns>
     private IEnumerator StateTimerRoutine()
     {
         float waitTime = 0f;
