@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:Assets/Art/Sprites/Enemy/MeleeRanged/Anims/Placeholder/idle.anim.meta
 guid: c1472cb0f0736c042afd53fb0e623928
-=======
-guid: f752f508f77a68e408713594cde0203c
->>>>>>> a7127d8f4ef1bc69b7c66599cf14bcfa03bccb3e:Assets/Art/Sprites/Enemy/Spawner/Anims/Idle.anim.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 7400000

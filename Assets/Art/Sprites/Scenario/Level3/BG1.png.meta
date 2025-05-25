@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8984d9a8e88d5324ca2e78ae7a95ce33
+guid: fe4810d3d0c49b14282b7e6bdc1d8ef5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8487755551480121492
-    second: Lvl3TileColuna_0
+      213: 3095648225022645599
+    second: BG1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Lvl3TileColuna_0
+      name: BG1_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 32
-        width: 16
-        height: 16
+        x: 190
+        y: 5
+        width: 301
+        height: 244
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,52 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c677da5cb4f653a80800000000000000
-      internalID: -8487755551480121492
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lvl3TileColuna_1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 84bfbe8da292918459ad7e2ab3ad413e
-      internalID: 1728128888
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lvl3TileColuna_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fad225aea90810d45869d273a4ff3647
-      internalID: -311129238
+      spriteID: f551b02c8a3f5fa20800000000000000
+      internalID: 3095648225022645599
       vertices: []
       indices: 
       edges: []
@@ -182,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 7910590206a88ec41bef47912e0536f3
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -192,9 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Lvl3TileColuna_0: -8487755551480121492
-      Lvl3TileColuna_1: 1728128888
-      Lvl3TileColuna_2: -311129238
+      BG1_0: 3095648225022645599
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
