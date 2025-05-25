@@ -22,15 +22,15 @@ public class GetoAttackHandler : MonoBehaviour
     /// <summary>
     /// Starts the attack event depending on the current state of Geto.
     /// </summary>
-    public void StartAttackSequence()
+    public void StartAttackSequence(int times = 1)
     {
         switch (stateManager.CurrentState)
         {
             case GetoStates.Melee:
-                StartCoroutine(AttackAfterDelay(meleeDelay));
+                StartCoroutine(AttackAfterDelay(meleeDelay, times));
                 break;
             case GetoStates.Ranged:
-                StartCoroutine(AttackAfterDelay(rangedDelay));
+                StartCoroutine(AttackAfterDelay(rangedDelay, times));
                 break;
         }
     }
@@ -38,34 +38,39 @@ public class GetoAttackHandler : MonoBehaviour
     /// <summary>
     /// Handles the attack animation and enable/disable the Fx.
     /// </summary>
-    /// <param name="delay">They delay of the attack</param>
+    /// <param name="delay">They delay before the attack happen</param>
     /// <returns></returns>
-    private IEnumerator AttackAfterDelay(float delay)
+    private IEnumerator AttackAfterDelay(float delay, int repeatTimes)
     {
-        if (stateManager.CurrentState == GetoStates.Ranged)
-            rangedAttackFX.GetComponent<SpriteRenderer>().enabled = true;
-
-        yield return new WaitForSeconds(delay);
-
-        switch (stateManager.CurrentState)
+        for (int i = 0; i < repeatTimes; i++)
         {
-            case GetoStates.Melee:
-                meleeAttackFX.SetActive(true);
-                // Wait melee attack full animation time
-                yield return new WaitForSeconds(0.33f);
-                // Disable melee attack fx
-                DisableAttackFX();
-                break;
-            case GetoStates.Ranged:
-                // Activate the ranged attack animation
-                Animator rangedAnimator = rangedAttackFX.GetComponent<Animator>();
-                rangedAnimator.enabled = true;
-                rangedAnimator.Play("Portal", 0, 0f);
-                // Wait ranged attack full animation time
-                yield return new WaitForSeconds(1.3f);
-                // Disable ranged attack fx
-                DisableAttackFX();
-                break;
+            if (stateManager.CurrentState == GetoStates.Ranged)
+            {
+                rangedAttackFX.GetComponent<SpriteRenderer>().enabled = true;
+            }
+
+            yield return new WaitForSeconds(delay);
+
+            switch (stateManager.CurrentState)
+            {
+                case GetoStates.Melee:
+                    meleeAttackFX.SetActive(true);
+                    // Wait melee attack full animation time
+                    yield return new WaitForSeconds(0.33f);
+                    // Disable melee attack fx
+                    DisableAttackFX();
+                    break;
+                case GetoStates.Ranged:
+                    // Activate the ranged attack animation
+                    Animator rangedAnimator = rangedAttackFX.GetComponent<Animator>();
+                    rangedAnimator.enabled = true;
+                    rangedAnimator.Play("Portal", 0, 0f);
+                    // Wait ranged attack full animation time
+                    yield return new WaitForSeconds(1.3f);
+                    // Disable ranged attack fx
+                    DisableAttackFX();
+                    break;
+            }
         }
     }
 

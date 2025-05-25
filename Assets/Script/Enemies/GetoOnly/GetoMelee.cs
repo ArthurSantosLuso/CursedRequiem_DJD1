@@ -9,7 +9,6 @@ public class GetoMelee : MonoBehaviour
     [SerializeField] private LayerMask targetLayer;
     [SerializeField] private Transform attackPoint;
     [SerializeField] private int attackDamage;
-    
 
     public void MeleeAttack()
     {

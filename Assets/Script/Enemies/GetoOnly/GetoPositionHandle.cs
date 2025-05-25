@@ -58,7 +58,7 @@ public class GetoPositionHandle : MonoBehaviour
                 StopCoroutine(stateTimer);
 
             // Notify the attack script to start the attacking logic
-            attackHandler.StartAttackSequence();
+            attackHandler.StartAttackSequence(stateManager.CurrentState == GetoStates.Melee ? 1 : 2);
 
             //Start current state timer
             stateTimer = StartCoroutine(StateTimerRoutine());
