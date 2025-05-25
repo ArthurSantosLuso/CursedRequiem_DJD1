@@ -29,10 +29,9 @@ public class GetoAttackHandler : MonoBehaviour
             case GetoStates.Melee:
                 StartCoroutine(AttackAfterDelay(meleeDelay));
                 break;
-
-            //case GetoStates.Ranged:
-            //    StartCoroutine(AttackAfterDelay(rangedDelay, rangedAnimator, "RangedAttack"));
-            //    break;
+            case GetoStates.Ranged:
+                StartCoroutine(AttackAfterDelay(rangedDelay));
+                break;
         }
     }
 
@@ -43,22 +42,30 @@ public class GetoAttackHandler : MonoBehaviour
     /// <returns></returns>
     private IEnumerator AttackAfterDelay(float delay)
     {
+        if (stateManager.CurrentState == GetoStates.Ranged)
+            rangedAttackFX.GetComponent<SpriteRenderer>().enabled = true;
+
         yield return new WaitForSeconds(delay);
 
         switch (stateManager.CurrentState)
         {
             case GetoStates.Melee:
                 meleeAttackFX.SetActive(true);
-
                 // Wait melee attack full animation time
                 yield return new WaitForSeconds(0.33f);
                 // Disable melee attack fx
                 DisableAttackFX();
-
                 break;
-            //case GetoStates.Ranged:
-            //    rangedAnimator.Play("Ranged", -1, 0f);
-            //    break;
+            case GetoStates.Ranged:
+                // Activate the ranged attack animation
+                Animator rangedAnimator = rangedAttackFX.GetComponent<Animator>();
+                rangedAnimator.enabled = true;
+                rangedAnimator.Play("Portal", 0, 0f);
+                // Wait ranged attack full animation time
+                yield return new WaitForSeconds(1.3f);
+                // Disable ranged attack fx
+                DisableAttackFX();
+                break;
         }
     }
 
@@ -68,5 +75,7 @@ public class GetoAttackHandler : MonoBehaviour
     private void DisableAttackFX()
     {
         meleeAttackFX.SetActive(false);
+        rangedAttackFX.GetComponent<Animator>().enabled = false;
+        rangedAttackFX.GetComponent<SpriteRenderer>().enabled = false;
     }
 }

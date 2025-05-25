@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4530363461839875395
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3076511909320854148}
+  m_Layer: 0
+  m_Name: AttackPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3076511909320854148
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4530363461839875395}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5803457881899504026}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5256933486326320228
 GameObject:
   m_ObjectHideFlags: 0
@@ -16,8 +47,6 @@ GameObject:
   - component: {fileID: 167262704740583620}
   - component: {fileID: 5326042871496672995}
   - component: {fileID: 7700100209105410773}
-  - component: {fileID: 7762882378977800417}
-  - component: {fileID: 6938440972665684131}
   - component: {fileID: 6111801339173644158}
   m_Layer: 0
   m_Name: Geto
@@ -206,7 +235,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateManager: {fileID: 5326042871496672995}
   meleePosition: {fileID: 0}
-  timeStayMelee: 2
+  timeStayMelee: 5
   rangedPosition: {fileID: 0}
   timeStayRanged: 2
   attackHandler: {fileID: 6111801339173644158}
@@ -238,36 +267,6 @@ MonoBehaviour:
   currentValue: 0
   barsScript: {fileID: 0}
   player: {fileID: 0}
---- !u!114 &7762882378977800417
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5256933486326320228}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38d164f66f0ef23488b9ec47f09de9e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stateManager: {fileID: 6938440972665684131}
-  meleePosition: {fileID: 0}
-  timeStayMelee: 2
-  rangedPosition: {fileID: 0}
-  timeStayRanged: 2
-  attackHandler: {fileID: 6111801339173644158}
---- !u!114 &6938440972665684131
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5256933486326320228}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1ed4a45d69be424d8de153385775007, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &6111801339173644158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -286,6 +285,7 @@ MonoBehaviour:
   meleeAnimator: {fileID: 6283547223146570355}
   rangedAnimator: {fileID: 5055726700393974644}
   meleeAttackFX: {fileID: 5868461844953021735}
+  rangedAttackFX: {fileID: 0}
 --- !u!1 &5464940686339197458
 GameObject:
   m_ObjectHideFlags: 0
@@ -330,6 +330,7 @@ GameObject:
   - component: {fileID: 5803457881899504026}
   - component: {fileID: 6482005007701628738}
   - component: {fileID: 6283547223146570355}
+  - component: {fileID: 5045229815277035939}
   m_Layer: 0
   m_Name: Melee
   m_TagString: Untagged
@@ -349,7 +350,8 @@ Transform:
   m_LocalPosition: {x: 75.4, y: 20.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 3076511909320854148}
   m_Father: {fileID: 4105394829025218840}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!212 &6482005007701628738
@@ -429,6 +431,24 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5045229815277035939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5868461844953021735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24cc0ad00fa13bd4d89d576e85f1559f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackRange: 90
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 1024
+  attackPoint: {fileID: 3076511909320854148}
+  attackDamage: 10
 --- !u!1 &7880497461887777011
 GameObject:
   m_ObjectHideFlags: 0
@@ -440,13 +460,14 @@ GameObject:
   - component: {fileID: 3112088514122319234}
   - component: {fileID: 7712500970296836321}
   - component: {fileID: 5055726700393974644}
+  - component: {fileID: 5215710751886746865}
   m_Layer: 0
   m_Name: Ranged
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3112088514122319234
 Transform:
   m_ObjectHideFlags: 0
@@ -456,7 +477,7 @@ Transform:
   m_GameObject: {fileID: 7880497461887777011}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 451.5, y: -64.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -506,15 +527,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 7002881656674357156, guid: dd57adc71a6aca641aa28ef369473f32, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 64, y: 64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &5055726700393974644
@@ -527,7 +548,7 @@ Animator:
   m_GameObject: {fileID: 7880497461887777011}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9a1ab27cb1a8a86448f1a9d9fce2a604, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -539,3 +560,16 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5215710751886746865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7880497461887777011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d0bd8d762dd7604fa09cc4d53de7a52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}

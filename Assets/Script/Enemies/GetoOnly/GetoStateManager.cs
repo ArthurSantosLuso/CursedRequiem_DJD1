@@ -15,7 +15,7 @@ public class GetoStateManager : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-        SetState(GetoStates.Melee);
+        SetState(GetoStates.Ranged);
     }
 
     /// <summary>
