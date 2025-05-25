@@ -24,8 +24,6 @@ public class EnemyMeleeAttack : MonoBehaviour
     [Header("Other Configurations")]
     [SerializeField]
     private Animator animator;
-    [SerializeField]
-    private GameObject slashFX;
 
     private bool canAttack = true;
     private EnemyStateManager stateManager;
@@ -84,8 +82,6 @@ public class EnemyMeleeAttack : MonoBehaviour
         if (!stateManager.IsSleeping())
         {
             animator.SetTrigger("attack");
-            slashFX.SetActive(false);
-            slashFX.SetActive(true);
         }
 
         yield return new WaitForSeconds(attackCooldown);
@@ -129,6 +125,13 @@ public class EnemyMeleeAttack : MonoBehaviour
         }
     }
 
+    private IEnumerator WaitBeforeWalkAgain()
+    {
+        yield return new WaitForSeconds(1f);
+        stateManager.SetState(EnemyStates.Patrolling);
+        waitCoroutine = null;
+    }
+
     private void OnDrawGizmosSelected()
     {
         if (attackPoint != null)
@@ -136,12 +139,5 @@ public class EnemyMeleeAttack : MonoBehaviour
             Gizmos.color = Color.red;
             Gizmos.DrawWireSphere(attackPoint.position, attackRange);
         }
-    }
-
-    private IEnumerator WaitBeforeWalkAgain()
-    {
-        yield return new WaitForSeconds(1f);
-        stateManager.SetState(EnemyStates.Patrolling);
-        waitCoroutine = null;
     }
 }

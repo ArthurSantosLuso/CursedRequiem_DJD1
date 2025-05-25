@@ -9,7 +9,7 @@ public class SpawnerFlip : MonoBehaviour
 
     private void Update()
     {
-        player = spawnController.PlayerReference; // Expose this from your spawn script
+        player = spawnController.PlayerReference;
         if (player == null) return;
 
         HandleFlip();

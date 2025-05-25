@@ -27,14 +27,8 @@ public class FlyingEnemyAI : MonoBehaviour
         rb.gravityScale = 0f;
     }
 
-    private void Start()
-    {
-        // lifeTimer = selfDestructTime;
-    }
-
     private void Update()
     {
-        // HandleLifetime();
         DetectPlayer();
     }
 
@@ -58,20 +52,10 @@ public class FlyingEnemyAI : MonoBehaviour
         }
 
         Vector2 direction = (targetPlayer.position - transform.position).normalized;
-        //Vector2 velocity = new Vector2(direction.x * maxSpeed, rb.linearVelocityY);
         Vector2 velocity = direction * maxSpeed;
 
         rb.linearVelocity = Vector2.MoveTowards(rb.linearVelocity, velocity, acceleration * Time.fixedDeltaTime);
     }
-
-    //private void HandleLifetime()
-    //{
-    //    lifeTimer -= Time.deltaTime;
-    //    if (lifeTimer <= 0f)
-    //    {
-    //        Die();
-    //    }
-    //}
 
     private void Die()
     {

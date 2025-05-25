@@ -72,16 +72,6 @@ public class PlayerAttack : MonoBehaviour
 
     }
 
-    private void EnableHeavyAttackCollider()
-    {
-        heavyAttackCollider.GetComponent<BoxCollider2D>().enabled = true;
-    }
-
-    private void DisableHeavyAttackCollider()
-    {
-        heavyAttackCollider.GetComponent<BoxCollider2D>().enabled = false;
-    }
-
     private void ToggleOnIsAttacking()
     {
         isAttacking = true;
