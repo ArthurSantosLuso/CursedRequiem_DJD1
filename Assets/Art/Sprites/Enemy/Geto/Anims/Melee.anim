@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Tp
+  m_Name: Melee
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,23 +21,17 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: -1277523641, guid: 91282337520dcf244a2b3d3ddc64d2de, type: 3}
-    - time: 0.07692308
-      value: {fileID: -45821935, guid: 91282337520dcf244a2b3d3ddc64d2de, type: 3}
-    - time: 0.15384616
-      value: {fileID: -279875246, guid: 91282337520dcf244a2b3d3ddc64d2de, type: 3}
-    - time: 0.23076923
-      value: {fileID: 1145190281, guid: 91282337520dcf244a2b3d3ddc64d2de, type: 3}
-    - time: 0.30769232
-      value: {fileID: 1721615631, guid: 91282337520dcf244a2b3d3ddc64d2de, type: 3}
-    - time: 0.3846154
-      value: {fileID: 751393672, guid: 91282337520dcf244a2b3d3ddc64d2de, type: 3}
+      value: {fileID: 9135700221931609013, guid: 90d8b8a12d6e4a044b49530d36f339ee, type: 3}
+    - time: 0.16666667
+      value: {fileID: -3043732825932465196, guid: 90d8b8a12d6e4a044b49530d36f339ee, type: 3}
+    - time: 0.33333334
+      value: {fileID: 25233373878067862, guid: 90d8b8a12d6e4a044b49530d36f339ee, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
     flags: 2
-  m_SampleRate: 13
+  m_SampleRate: 6
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -54,18 +48,15 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: -1277523641, guid: 91282337520dcf244a2b3d3ddc64d2de, type: 3}
-    - {fileID: -45821935, guid: 91282337520dcf244a2b3d3ddc64d2de, type: 3}
-    - {fileID: -279875246, guid: 91282337520dcf244a2b3d3ddc64d2de, type: 3}
-    - {fileID: 1145190281, guid: 91282337520dcf244a2b3d3ddc64d2de, type: 3}
-    - {fileID: 1721615631, guid: 91282337520dcf244a2b3d3ddc64d2de, type: 3}
-    - {fileID: 751393672, guid: 91282337520dcf244a2b3d3ddc64d2de, type: 3}
+    - {fileID: 9135700221931609013, guid: 90d8b8a12d6e4a044b49530d36f339ee, type: 3}
+    - {fileID: -3043732825932465196, guid: 90d8b8a12d6e4a044b49530d36f339ee, type: 3}
+    - {fileID: 25233373878067862, guid: 90d8b8a12d6e4a044b49530d36f339ee, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.46153846
+    m_StopTime: 0.5
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -85,8 +76,8 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0.3846154
-    functionName: NotifyAnimationFinished
+  - time: 0.33333334
+    functionName: MeleeAttack
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

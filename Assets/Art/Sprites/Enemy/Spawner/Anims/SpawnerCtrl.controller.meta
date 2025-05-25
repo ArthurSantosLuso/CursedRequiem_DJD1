@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Art/Sprites/Enemy/MeleeRanged/Anims/Placeholder/move.anim.meta
+guid: d20a09a82378e674199870cd4a93d37a
+=======
 guid: fac7ba5f3d44f924ea5c850487d156d4
+>>>>>>> a7127d8f4ef1bc69b7c66599cf14bcfa03bccb3e:Assets/Art/Sprites/Enemy/Spawner/Anims/SpawnerCtrl.controller.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 9100000

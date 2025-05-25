@@ -1,67 +1,82 @@
 fileFormatVersion: 2
-guid: dd57adc71a6aca641aa28ef369473f32
+guid: ea182402f95aea049bb402c548a0e53e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7002881656674357156
-    second: RangedAttackGeto_0
+      213: 6498312615629580516
+    second: PortalRangedBig_0
   - first:
-      213: -2310661959055296643
-    second: RangedAttackGeto_1
+      213: 2946384588277797595
+    second: PortalRangedBig_1
   - first:
-      213: 8460371032845295398
-    second: RangedAttackGeto_2
+      213: -6032094336307657962
+    second: PortalRangedBig_2
   - first:
-      213: 7609541549405527766
-    second: RangedAttackGeto_3
+      213: -223473032129454460
+    second: PortalRangedBig_3
   - first:
-      213: 1861300516409648429
-    second: RangedAttackGeto_4
+      213: -7067928447012676649
+    second: PortalRangedBig_4
   - first:
-      213: -8682912729101232653
-    second: RangedAttackGeto_5
+      213: -6836524636905859934
+    second: PortalRangedBig_5
   - first:
-      213: 2222145629508252394
-    second: RangedAttackGeto_6
+      213: -5332686978154184518
+    second: PortalRangedBig_6
   - first:
-      213: 5579892848461357242
-    second: RangedAttackGeto_7
+      213: 7156368907056427665
+    second: PortalRangedBig_7
   - first:
-      213: 1778094778070371217
-    second: RangedAttackGeto_8
+      213: 3918031523415222326
+    second: PortalRangedBig_8
   - first:
-      213: -3751334822039456657
-    second: RangedAttackGeto_9
+      213: 90371332155132590
+    second: PortalRangedBig_9
   - first:
-      213: 3348715849766327282
-    second: RangedAttackGeto_10
+      213: -8224333100241785163
+    second: PortalRangedBig_10
   - first:
-      213: -3429850035040328281
-    second: RangedAttackGeto_11
+      213: -5434848528388341193
+    second: PortalRangedBig_11
   - first:
-      213: -1269051520149178371
-    second: RangedAttackGeto_12
+      213: 4334733499081723313
+    second: PortalRangedBig_12
   - first:
-      213: 4727559697801548600
-    second: RangedAttackGeto_13
+      213: 2155897854757011253
+    second: PortalRangedBig_13
   - first:
-      213: -677016137132683649
-    second: RangedAttackGeto_14
+      213: 803590258817499332
+    second: PortalRangedBig_14
   - first:
-      213: 59668181998820110
-    second: RangedAttackGeto_15
+      213: 525848330294136166
+    second: PortalRangedBig_15
   - first:
-      213: -2340541670512857238
-    second: RangedAttackGeto_16
+      213: -8769041631381452488
+    second: PortalRangedBig_16
   - first:
-      213: -4447511929936868150
-    second: RangedAttackGeto_17
+      213: -4521776578007284208
+    second: PortalRangedBig_17
   - first:
-      213: 22521227635952868
-    second: RangedAttackGeto_18
+      213: -4610041988962639828
+    second: PortalRangedBig_18
   - first:
-      213: -622246574027164305
-    second: RangedAttackGeto_19
+      213: -5378448832111674572
+    second: PortalRangedBig_19
+  - first:
+      213: -6172142582216752900
+    second: PortalRangedBig_20
+  - first:
+      213: 5408362657483609997
+    second: PortalRangedBig_21
+  - first:
+      213: 628247640765153467
+    second: PortalRangedBig_22
+  - first:
+      213: 2190657641961700035
+    second: PortalRangedBig_23
+  - first:
+      213: -927005802015100525
+    second: PortalRangedBig_24
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -158,7 +173,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -170,265 +185,265 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: RangedAttackGeto_0
+      name: PortalRangedBig_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 64
-        height: 64
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4af8c2e83cb3f2160800000000000000
-      internalID: 7002881656674357156
+      spriteID: 4e86a06f4e4ae2a50800000000000000
+      internalID: 6498312615629580516
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedAttackGeto_1
+      name: PortalRangedBig_1
       rect:
         serializedVersion: 2
         x: 64
         y: 0
         width: 64
-        height: 64
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d77308ec031eeefd0800000000000000
-      internalID: -2310661959055296643
+      spriteID: bd2dbf32c29a3e820800000000000000
+      internalID: 2946384588277797595
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedAttackGeto_2
+      name: PortalRangedBig_2
       rect:
         serializedVersion: 2
         x: 128
         y: 0
         width: 64
-        height: 64
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 62f9fb021a6496570800000000000000
-      internalID: 8460371032845295398
+      spriteID: 6138cb81922b94ca0800000000000000
+      internalID: -6032094336307657962
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedAttackGeto_3
+      name: PortalRangedBig_3
       rect:
         serializedVersion: 2
         x: 192
         y: 0
         width: 64
-        height: 64
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6de54ebd8b58a9960800000000000000
-      internalID: 7609541549405527766
+      spriteID: 48e5b07167016ecf0800000000000000
+      internalID: -223473032129454460
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedAttackGeto_4
+      name: PortalRangedBig_4
       rect:
         serializedVersion: 2
         x: 256
         y: 0
         width: 64
-        height: 64
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d2529d445faa4d910800000000000000
-      internalID: 1861300516409648429
+      spriteID: 7db5ee1668ca9ed90800000000000000
+      internalID: -7067928447012676649
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedAttackGeto_5
+      name: PortalRangedBig_5
       rect:
         serializedVersion: 2
         x: 320
         y: 0
         width: 64
-        height: 64
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3f5143e70e8108780800000000000000
-      internalID: -8682912729101232653
+      spriteID: 2a4150f6019cf11a0800000000000000
+      internalID: -6836524636905859934
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedAttackGeto_6
+      name: PortalRangedBig_6
       rect:
         serializedVersion: 2
         x: 384
         y: 0
         width: 64
-        height: 64
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ae2b6063da5a6de10800000000000000
-      internalID: 2222145629508252394
+      spriteID: ab0c4c8727d7ef5b0800000000000000
+      internalID: -5332686978154184518
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedAttackGeto_7
+      name: PortalRangedBig_7
       rect:
         serializedVersion: 2
         x: 448
         y: 0
         width: 64
-        height: 64
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ab0284d6bf2cf6d40800000000000000
-      internalID: 5579892848461357242
+      spriteID: 192bfbada97805360800000000000000
+      internalID: 7156368907056427665
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedAttackGeto_8
+      name: PortalRangedBig_8
       rect:
         serializedVersion: 2
         x: 512
         y: 0
         width: 64
-        height: 64
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 19b8cd7a7cf0da810800000000000000
-      internalID: 1778094778070371217
+      spriteID: 63862f379e4af5630800000000000000
+      internalID: 3918031523415222326
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedAttackGeto_9
+      name: PortalRangedBig_9
       rect:
         serializedVersion: 2
         x: 576
         y: 0
         width: 64
-        height: 64
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f64f8c2dad490fbc0800000000000000
-      internalID: -3751334822039456657
+      spriteID: eaa4cfe6f30114100800000000000000
+      internalID: 90371332155132590
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedAttackGeto_10
+      name: PortalRangedBig_10
       rect:
         serializedVersion: 2
         x: 640
         y: 0
         width: 64
-        height: 64
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2f3da07b257097e20800000000000000
-      internalID: 3348715849766327282
+      spriteID: 5bee995ae9c4ddd80800000000000000
+      internalID: -8224333100241785163
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedAttackGeto_11
+      name: PortalRangedBig_11
       rect:
         serializedVersion: 2
         x: 704
         y: 0
         width: 64
-        height: 64
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7a56f84b099b660d0800000000000000
-      internalID: -3429850035040328281
+      spriteID: 732cb59fe0a8394b0800000000000000
+      internalID: -5434848528388341193
       vertices: []
       indices: 
       edges: []
@@ -437,7 +452,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: eb8a8c4246a0ceb4c924e3b5dbcb390d
+    spriteID: eeab8727078981c47a2bb21d3ea770ac
     internalID: 0
     vertices: []
     indices: 
@@ -447,18 +462,18 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      RangedAttackGeto_0: 7002881656674357156
-      RangedAttackGeto_1: -2310661959055296643
-      RangedAttackGeto_10: 3348715849766327282
-      RangedAttackGeto_11: -3429850035040328281
-      RangedAttackGeto_2: 8460371032845295398
-      RangedAttackGeto_3: 7609541549405527766
-      RangedAttackGeto_4: 1861300516409648429
-      RangedAttackGeto_5: -8682912729101232653
-      RangedAttackGeto_6: 2222145629508252394
-      RangedAttackGeto_7: 5579892848461357242
-      RangedAttackGeto_8: 1778094778070371217
-      RangedAttackGeto_9: -3751334822039456657
+      PortalRangedBig_0: 6498312615629580516
+      PortalRangedBig_1: 2946384588277797595
+      PortalRangedBig_10: -8224333100241785163
+      PortalRangedBig_11: -5434848528388341193
+      PortalRangedBig_2: -6032094336307657962
+      PortalRangedBig_3: -223473032129454460
+      PortalRangedBig_4: -7067928447012676649
+      PortalRangedBig_5: -6836524636905859934
+      PortalRangedBig_6: -5332686978154184518
+      PortalRangedBig_7: 7156368907056427665
+      PortalRangedBig_8: 3918031523415222326
+      PortalRangedBig_9: 90371332155132590
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
