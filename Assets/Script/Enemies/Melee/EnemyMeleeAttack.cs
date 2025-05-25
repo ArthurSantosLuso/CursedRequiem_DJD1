@@ -24,6 +24,8 @@ public class EnemyMeleeAttack : MonoBehaviour
     [Header("Other Configurations")]
     [SerializeField]
     private Animator animator;
+    [SerializeField]
+    private GameObject slashFX;
 
     private bool canAttack = true;
     private EnemyStateManager stateManager;
@@ -80,7 +82,11 @@ public class EnemyMeleeAttack : MonoBehaviour
 
         // Check again before attacking, in case state changed during delay
         if (!stateManager.IsSleeping())
+        {
             animator.SetTrigger("attack");
+            slashFX.SetActive(false);
+            slashFX.SetActive(true);
+        }
 
         yield return new WaitForSeconds(attackCooldown);
 
