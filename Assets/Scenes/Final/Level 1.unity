@@ -4065,13 +4065,29 @@ PrefabInstance:
       propertyPath: 'waypoints.Array.data[1]'
       value: 
       objectReference: {fileID: 1230225051}
+    - target: {fileID: 4103041144991532883, guid: 377e98d288cfd304da7bba69fc1d93ed, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103041144991532883, guid: 377e98d288cfd304da7bba69fc1d93ed, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103041144991532883, guid: 377e98d288cfd304da7bba69fc1d93ed, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103041144991532883, guid: 377e98d288cfd304da7bba69fc1d93ed, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 32
+      objectReference: {fileID: 0}
     - target: {fileID: 5462417036230386799, guid: 377e98d288cfd304da7bba69fc1d93ed, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -143.82507
+      value: -471.9
       objectReference: {fileID: 0}
     - target: {fileID: 5462417036230386799, guid: 377e98d288cfd304da7bba69fc1d93ed, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 15.733147
+      value: 15.1
       objectReference: {fileID: 0}
     - target: {fileID: 5462417036230386799, guid: 377e98d288cfd304da7bba69fc1d93ed, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4108,6 +4124,10 @@ PrefabInstance:
     - target: {fileID: 6382728317336999501, guid: 377e98d288cfd304da7bba69fc1d93ed, type: 3}
       propertyPath: m_Name
       value: CurseMelee
+      objectReference: {fileID: 0}
+    - target: {fileID: 6382728317336999501, guid: 377e98d288cfd304da7bba69fc1d93ed, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4498,13 +4518,29 @@ PrefabInstance:
       propertyPath: 'waypoints.Array.data[1]'
       value: 
       objectReference: {fileID: 188508079}
+    - target: {fileID: 4103041144991532883, guid: 377e98d288cfd304da7bba69fc1d93ed, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103041144991532883, guid: 377e98d288cfd304da7bba69fc1d93ed, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103041144991532883, guid: 377e98d288cfd304da7bba69fc1d93ed, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103041144991532883, guid: 377e98d288cfd304da7bba69fc1d93ed, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 32
+      objectReference: {fileID: 0}
     - target: {fileID: 5462417036230386799, guid: 377e98d288cfd304da7bba69fc1d93ed, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -857.42126
+      value: -1700
       objectReference: {fileID: 0}
     - target: {fileID: 5462417036230386799, guid: 377e98d288cfd304da7bba69fc1d93ed, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -110.7
+      value: -97
       objectReference: {fileID: 0}
     - target: {fileID: 5462417036230386799, guid: 377e98d288cfd304da7bba69fc1d93ed, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4854,10 +4890,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8603952739000835734, guid: 207f0eccd464b3e4d876c21949d3f6c1, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 6200000, guid: 4a67ccfe5ed169147b3b688386431f43, type: 2}
     - target: {fileID: 9003166929463570769, guid: 207f0eccd464b3e4d876c21949d3f6c1, type: 3}
       propertyPath: m_Enabled
       value: 1
