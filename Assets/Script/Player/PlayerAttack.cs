@@ -20,15 +20,13 @@ public class PlayerAttack : MonoBehaviour
     [Header("Attack Colliders")]
     [SerializeField]
     private GameObject lightAttackCollider;
-    [SerializeField]
-    private GameObject heavyAttackCollider;
+
 
     private void Start()
     {
         anim = GetComponent<Animator>();
 
         lightAttackCollider.GetComponent<BoxCollider2D>().enabled = false;
-        heavyAttackCollider.GetComponent<BoxCollider2D>().enabled = false;
     }
 
     private void Update()

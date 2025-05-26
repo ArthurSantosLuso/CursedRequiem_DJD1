@@ -1,16 +1,30 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyCount : MonoBehaviour
 {
-    private static int enemiesKilled = 0;
+    public static EnemyCount Instance;
 
-    public static void AddKill()
+    [SerializeField] private int enemiesToKill = 5;
+    [SerializeField] private string nextSceneName = "CenaVitoria";
+
+    private int deadEnemies = 0;
+
+    private void Awake()
     {
-        enemiesKilled++;
+        if (Instance == null)
+            Instance = this;
+        else
+            Destroy(gameObject);
     }
 
-    public static int GetKillCount()
+    public void EnemyDied()
     {
-        return enemiesKilled;
+        deadEnemies++;
+
+        if (deadEnemies >= enemiesToKill)
+        {
+            SceneManager.LoadScene(nextSceneName);
+        }
     }
 }

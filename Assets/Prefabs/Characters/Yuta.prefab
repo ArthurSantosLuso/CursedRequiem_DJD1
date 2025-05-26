@@ -248,7 +248,6 @@ MonoBehaviour:
   rig: {fileID: 8603952739000835734}
   slashFX: {fileID: 7323334798098423192}
   lightAttackCollider: {fileID: 3431310630417557532}
-  heavyAttackCollider: {fileID: 0}
 --- !u!114 &294088963002731425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -261,7 +260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c72731090c752a646b397edcfa3cb49c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultValue: 100
+  defaultValue: 150
   currentValue: 0
   barsScript: {fileID: 0}
   manaDrainPerSecond: 2
@@ -278,7 +277,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13b65721588c72442bc80c409e9eddd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultValue: 80
+  defaultValue: 150
   currentValue: 0
   barsScript: {fileID: 0}
   moveScript: {fileID: 7150953695814880688}
@@ -503,7 +502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2932c2ec230e734bac1a23c227e5832, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dmgValue: 20
+  dmgValue: 10
 --- !u!1 &3586977557473373492
 GameObject:
   m_ObjectHideFlags: 0

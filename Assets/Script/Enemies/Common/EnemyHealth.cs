@@ -36,6 +36,11 @@ public class EnemyHealth : ValuesScript
 
         if (currentValue <= 0)
         {
+            FlyingEnemyAI flyingEnemyAI = GetComponent<FlyingEnemyAI>();
+            if (flyingEnemyAI == null)
+            {
+                EnemyCount.Instance.EnemyDied();
+            }
             Destroy(gameObject);
         }
 
